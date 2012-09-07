@@ -1128,3 +1128,43 @@ Served asset /jquery.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-07 14:41:16 -0300
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 0:0:0:0:0:0:0:1 at 2012-09-07 14:58:28 -0300
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (39ms)
+
+
+Started GET "/employees" for 0:0:0:0:0:0:0:1 at 2012-09-07 14:58:32 -0300
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1mSELECT "employees".* FROM "employees" [0m
+  Rendered employees/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 433ms (Views: 259.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-07 14:58:32 -0300
+Served asset /application.css - 304 Not Modified (68ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-07 14:58:32 -0300
+Served asset /scaffolds.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/employees.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-07 14:58:32 -0300
+Served asset /employees.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/employees.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-07 14:58:32 -0300
+Served asset /employees.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-07 14:58:33 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-07 14:58:33 -0300
+Served asset /jquery.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-07 14:58:33 -0300
+Served asset /application.js - 304 Not Modified (38ms)
