@@ -1,4 +1,6 @@
 CrowdSINOS::Application.routes.draw do
+  resources :testes
+
   resources :employees
 
   # The priority is based upon order of creation:
