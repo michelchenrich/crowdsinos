@@ -4,6 +4,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :name
       t.date :hire_date
       t.dept :depts
+      t.status :status
 
       t.timestamps
     end
