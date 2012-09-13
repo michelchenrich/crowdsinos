@@ -4,4 +4,5 @@ class Employee < ActiveRecord::Base
   validates :name, :presence => true
   validates :name, :length => { :in => 3..60 }
   validates :hire_date, :presence => true
+  #Commit test
 end
