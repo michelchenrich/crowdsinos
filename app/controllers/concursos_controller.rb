@@ -44,7 +44,7 @@ class ConcursosController < ApplicationController
 
     respond_to do |format|
       if @concurso.save
-        format.html { redirect_to @concurso, :notice => 'Concurso was successfully created.' }
+        format.html { redirect_to @concurso, :notice => 'Concurso criado com sucesso.' }
         format.json { render :json => @concurso, :status => :created, :location => @concurso }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class ConcursosController < ApplicationController
 
     respond_to do |format|
       if @concurso.update_attributes(params[:concurso])
-        format.html { redirect_to @concurso, :notice => 'Concurso was successfully updated.' }
+        format.html { redirect_to @concurso, :notice => 'Concurso alterado com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render :action => "edit" }

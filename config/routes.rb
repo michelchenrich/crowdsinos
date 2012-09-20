@@ -1,4 +1,6 @@
 CrowdSINOS::Application.routes.draw do
+  resources :usuarios
+
   resources :concursos
 
   # The priority is based upon order of creation:

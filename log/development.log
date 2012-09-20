@@ -1708,3 +1708,1195 @@ Served asset /concursos.css - 304 Not Modified (1ms)
 
 Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:53:19 -0300
 Served asset /concursos.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateConcursos (20120920002135)
+Migrating to CreateUsuarios (20120920015607)
+  [1m[35m (3.0ms)[0m  CREATE TABLE "usuarios" ("id" integer primary key autoincrement not null, "nome" varchar(255), "email" varchar(255), "senha" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (3.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120920015607')[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35m (0.0ms)[0m  SELECT name, sql FROM sqlite_master WHERE tbl_name = "concursos" AND type = 'index'
+  [1m[36m (0.0ms)[0m  [1mSELECT name, sql FROM sqlite_master WHERE tbl_name = "usuarios" AND type = 'index'[0m
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:59:45 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (1.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  [1m[36mUsuario Load (12.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."concurso_id" = 1 LIMIT 1[0m
+ActiveRecord::JDBCError: [SQLITE_ERROR] SQL error or missing database (no such column: usuarios.concurso_id): SELECT  "usuarios".* FROM "usuarios"  WHERE "usuarios"."concurso_id" = 1 LIMIT 1
+  Rendered concursos/index.html.erb within layouts/application (154.0ms)
+Completed 500 Internal Server Error in 205ms
+
+ActionView::Template::Error (ActiveRecord::JDBCError: [SQLITE_ERROR] SQL error or missing database (no such column: usuarios.concurso_id): SELECT  "usuarios".* FROM "usuarios"  WHERE "usuarios"."concurso_id" = 1 LIMIT 1):
+    18:     <td><%= concurso.nome %></td>
+    19:     <td><%= concurso.inicio %></td>
+    20:     <td><%= concurso.fim %></td>
+    21:     <td><%= concurso.ganhador.nome %></td>
+    22:     <td><%= concurso.contratante.nome %></td>
+    23:     <td><%= concurso.premio %></td>
+    24:     <td><%= link_to 'Exibir', concurso %></td>
+  app/views/concursos/index.html.erb:21:in `_app_views_concursos_index_html_erb__1390041202_7922'
+  app/views/concursos/index.html.erb:16:in `_app_views_concursos_index_html_erb__1390041202_7922'
+  app/controllers/concursos_controller.rb:7:in `index'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:00:15 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  Rendered concursos/index.html.erb within layouts/application (33.0ms)
+Completed 500 Internal Server Error in 84ms
+
+ActionView::Template::Error (undefined method `nome' for nil:NilClass):
+    18:     <td><%= concurso.nome %></td>
+    19:     <td><%= concurso.inicio %></td>
+    20:     <td><%= concurso.fim %></td>
+    21:     <td><%= concurso.ganhador.nome %></td>
+    22:     <td><%= concurso.contratante.nome %></td>
+    23:     <td><%= concurso.premio %></td>
+    24:     <td><%= link_to 'Exibir', concurso %></td>
+  app/views/concursos/index.html.erb:21:in `_app_views_concursos_index_html_erb__1390041202_7922'
+  app/views/concursos/index.html.erb:16:in `_app_views_concursos_index_html_erb__1390041202_7922'
+  app/controllers/concursos_controller.rb:7:in `index'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:09 -0300
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (25.0ms)
+Compiled usuarios.css  (31ms)  (pid 272)
+Compiled application.css  (161ms)  (pid 272)
+Compiled usuarios.js  (1698ms)  (pid 272)
+Compiled application.js  (1783ms)  (pid 272)
+Completed 200 OK in 2755ms (Views: 2748.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:12 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:12 -0300
+Served asset /usuarios.css - 200 OK (8ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:12 -0300
+Served asset /usuarios.js - 200 OK (10ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:12 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started GET "/usuarios" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:25 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios" 
+  Rendered usuarios/index.html.erb within layouts/application (120.0ms)
+Completed 200 OK in 163ms (Views: 154.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:26 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:26 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/new" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:27 -0300
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/_form.html.erb (21.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 81ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:27 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:27 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started POST "/usuarios" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:42 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "usuario"=>{"nome"=>"Usuário de teste 1", "email"=>"usuario@teste.1", "senha"=>"usuario@teste.1"}, "commit"=>"Create Usuario"}
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "nome", "senha", "updated_at") VALUES ('2012-09-20 02:06:42.876000', 'usuario@teste.1', 'Usuário de teste 1', 'usuario@teste.1', '2012-09-20 02:06:42.876000')[0m
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 233ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/usuarios/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:43 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  Rendered usuarios/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 35ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:43 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:43 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:46 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" [0m
+  Rendered usuarios/index.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 103ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:46 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:46 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:50 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (1.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  Rendered concursos/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 71ms (Views: 65.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:50 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:50 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/concursos/1/edit" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:53 -0300
+Processing by ConcursosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcurso Load (0.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1[0m
+  Rendered concursos/_form.html.erb (63.0ms)
+  Rendered concursos/edit.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 106ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:53 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:53 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started PUT "/concursos/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:59 -0300
+Processing by ConcursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"20", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"21", "ganhador_id"=>"0", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Update Concurso", "id"=>"1"}
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1
+  [1m[36mConcurso Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE ("concursos"."nome" = 'Teste' AND "concursos"."id" != 1) LIMIT 1[0m
+  [1m[35m (5.0ms)[0m  UPDATE "concursos" SET "ganhador_id" = 0, "updated_at" = '2012-09-20 02:06:59.289000' WHERE "concursos"."id" = 1
+Redirected to http://localhost:3000/concursos/1
+Completed 302 Found in 238ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/concursos/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:59 -0300
+Processing by ConcursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1[0m
+  Rendered concursos/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:59 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:06:59 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:03 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1[0m
+  Rendered concursos/index.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 91ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:04 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:04 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/concursos/2/edit" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:08 -0300
+Processing by ConcursosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mConcurso Load (1.0ms)[0m  SELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 2 LIMIT 1
+  Rendered concursos/_form.html.erb (60.0ms)
+  Rendered concursos/edit.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 95ms (Views: 88.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:09 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:09 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started PUT "/concursos/2" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:11 -0300
+Processing by ConcursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste 2", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"25", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"26", "ganhador_id"=>"1", "contratante_id"=>"1", "premio"=>""}, "commit"=>"Update Concurso", "id"=>"2"}
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 2 LIMIT 1[0m
+  [1m[35mConcurso Exists (1.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE ("concursos"."nome" = 'Teste 2' AND "concursos"."id" != 2) LIMIT 1
+  [1m[36m (5.0ms)[0m  [1mUPDATE "concursos" SET "ganhador_id" = 1, "updated_at" = '2012-09-20 02:07:11.361000' WHERE "concursos"."id" = 2[0m
+Redirected to http://localhost:3000/concursos/2
+Completed 302 Found in 121ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/concursos/2" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:11 -0300
+Processing by ConcursosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mConcurso Load (1.0ms)[0m  SELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 2 LIMIT 1
+  Rendered concursos/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:11 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:11 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:12 -0300
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  Rendered concursos/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 65ms (Views: 60.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:13 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:13 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:13 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:13 -0300
+Served asset /usuarios.js - 304 Not Modified (3ms)
+
+
+Started GET "/concursos/1/edit" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:18 -0300
+Processing by ConcursosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcurso Load (0.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1[0m
+  Rendered concursos/_form.html.erb (61.0ms)
+  Rendered concursos/edit.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 92ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:18 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:18 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:18 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:18 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started PUT "/concursos/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:20 -0300
+Processing by ConcursosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"20", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"21", "ganhador_id"=>"1", "contratante_id"=>"1", "premio"=>""}, "commit"=>"Update Concurso", "id"=>"1"}
+  [1m[35mConcurso Load (1.0ms)[0m  SELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1
+  [1m[36mConcurso Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE ("concursos"."nome" = 'Teste' AND "concursos"."id" != 1) LIMIT 1[0m
+  [1m[35m (3.0ms)[0m  UPDATE "concursos" SET "ganhador_id" = 1, "contratante_id" = 1, "updated_at" = '2012-09-20 02:07:21.024000' WHERE "concursos"."id" = 1
+Redirected to http://localhost:3000/concursos/1
+Completed 302 Found in 115ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/concursos/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:21 -0300
+Processing by ConcursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcurso Load (0.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1[0m
+  Rendered concursos/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 127ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:21 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:21 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:21 -0300
+Served asset /usuarios.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:21 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:22 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (1.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  Rendered concursos/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 62ms (Views: 55.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:23 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:23 -0300
+Served asset /concursos.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:23 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:23 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/concursos/1/edit" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:07:59 -0300
+Processing by ConcursosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcurso Load (0.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1[0m
+  Rendered concursos/_form.html.erb (59.0ms)
+  Rendered concursos/edit.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 93ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:08:00 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:08:00 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:08:00 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:08:00 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:08:02 -0300
+Processing by ConcursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1
+  Rendered concursos/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 30ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:08:02 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:08:02 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:08:02 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:08:02 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:11:58 -0300
+Processing by ConcursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1[0m
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  Rendered concursos/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 42ms (Views: 33.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:11:58 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:11:58 -0300
+Served asset /usuarios.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:11:58 -0300
+Served asset /usuarios.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:11:58 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:24 -0300
+Processing by ConcursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  Rendered concursos/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 49ms (Views: 40.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:24 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:24 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:24 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:24 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos/1/edit" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:33 -0300
+Processing by ConcursosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1[0m
+  Rendered concursos/_form.html.erb (62.0ms)
+  Rendered concursos/edit.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 96ms (Views: 92.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:33 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:33 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:33 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:33 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:39 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (1.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  Rendered concursos/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 53ms (Views: 45.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:39 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:39 -0300
+Served asset /concursos.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:39 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:39 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/concursos/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:43 -0300
+Processing by ConcursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcurso Load (0.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  Rendered concursos/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 54ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:43 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:43 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:43 -0300
+Served asset /usuarios.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:12:43 -0300
+Served asset /usuarios.js - 304 Not Modified (1ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:10 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  Rendered concursos/index.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 129ms (Views: 74.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:10 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:10 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:10 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:10 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos/new" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:13 -0300
+Processing by ConcursosController#new as HTML
+  Rendered concursos/_form.html.erb (151.0ms)
+  Rendered concursos/new.html.erb within layouts/application (157.0ms)
+Completed 200 OK in 178ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:13 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:13 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:13 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:13 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:15 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[36mConcurso Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1[0m
+  Rendered concursos/_form.html.erb (56.0ms)
+  Rendered concursos/new.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 154ms (Views: 75.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:15 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:15 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:15 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:13:15 -0300
+Served asset /usuarios.js - 304 Not Modified (1ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:41 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"1", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[35mConcurso Exists (0.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  Rendered concursos/_form.html.erb (44.0ms)
+  Rendered concursos/new.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 85ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:42 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:42 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:42 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:42 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:45 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[35mConcurso Exists (1.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1[0m
+  Rendered concursos/_form.html.erb (83.0ms)
+  Rendered concursos/new.html.erb within layouts/application (86.0ms)
+Completed 200 OK in 133ms (Views: 114.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:46 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:46 -0300
+Served asset /usuarios.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:46 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:46 -0300
+Served asset /usuarios.js - 304 Not Modified (1ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:48 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"1", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[35mConcurso Exists (0.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  Rendered concursos/_form.html.erb (41.0ms)
+  Rendered concursos/new.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 87ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:49 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:49 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:49 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:49 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:50 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[35mConcurso Exists (1.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1
+  [1m[36mUsuario Load (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1[0m
+  Rendered concursos/_form.html.erb (50.0ms)
+  Rendered concursos/new.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 85ms (Views: 67.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:50 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:50 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:50 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:50 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:57 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[35mConcurso Exists (1.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1[0m
+  Rendered concursos/_form.html.erb (44.0ms)
+  Rendered concursos/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 77ms (Views: 63.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:58 -0300
+Served asset /concursos.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:58 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:58 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:14:58 -0300
+Served asset /usuarios.js - 304 Not Modified (1ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:17:18 -0300
+
+SyntaxError (E:/Documents/Dropbox/Ruby Projects/CrowdSINOS/app/models/concurso.rb:9: invalid multibyte char (US-ASCII)):
+  app/controllers/concursos_controller.rb:1:in `(root)'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:49 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  [1m[36mUsuario Load (1.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  Rendered concursos/index.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 142ms (Views: 108.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:49 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:49 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:49 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:49 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:52 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:52 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:52 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:52 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:56 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[36mConcurso Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1
+  Rendered concursos/_form.html.erb (46.0ms)
+  Rendered concursos/new.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 91ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:56 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:56 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:56 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:18:56 -0300
+Served asset /usuarios.js - 304 Not Modified (1ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:21:06 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[36mConcurso Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1
+  Rendered concursos/_form.html.erb (43.0ms)
+  Rendered concursos/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 86ms (Views: 70.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:21:06 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:21:06 -0300
+Served asset /usuarios.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:21:06 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:21:06 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:23:06 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[36mConcurso Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1
+ERROR: compiling _app_views_concursos__form_html_erb___630914762_14626 RAISED E:/Documents/Dropbox/Ruby Projects/CrowdSINOS/app/views/concursos/_form.html.erb:5: syntax error, unexpected tIDENTIFIER
+
+@output_buffer.safe_concat('    <div id="error_explanation">
+                                      ^
+Function body:           def _app_views_concursos__form_html_erb___630914762_14626(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "concursos/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append= (  #!/bin/env ruby  );@output_buffer.safe_concat('
+');@output_buffer.append= (  # encoding: utf-8  );@output_buffer.safe_concat('
+');@output_buffer.append=  form_for(@concurso) do |f| @output_buffer.safe_concat('
+');   if @concurso.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@concurso.errors.count, "erro") );@output_buffer.safe_concat(' nÃ£o permitiram o salvamento do concurso:</h2>
+
+      <ul>
+');       @concurso.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+    ');@output_buffer.append= ( f.label :nome );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :nome );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :inicio );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.datetime_select :inicio );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :fim );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.datetime_select :fim );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :ganhador_id );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.number_field :ganhador_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :contratante_id );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.number_field :contratante_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :premio );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :premio );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: org/jruby/RubyModule.java:2336:in `module_eval'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/template.rb:297:in `compile'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/template.rb:244:in `compile!'
+org/jruby/ext/thread/Mutex.java:149:in `synchronize'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/template.rb:232:in `compile!'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/template.rb:144:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications.rb:125:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/template.rb:143:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/partial_renderer.rb:238:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+E:/Documents/Dropbox/Ruby Projects/CrowdSINOS/app/views/concursos/new.html.erb:3:in `_app_views_concursos_new_html_erb__1231366954_12448'
+org/jruby/RubyBasicObject.java:1679:in `__send__'
+org/jruby/RubyKernel.java:2068:in `send'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/template.rb:145:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications.rb:125:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/template.rb:143:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:46:in `render_template'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/template_renderer.rb:18:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/renderer.rb:36:in `render_template'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_view/renderer/renderer.rb:17:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:110:in `_render_template'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:88:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/rendering.rb:16:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:40:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+C:/jruby-1.7.0.preview2/lib/ruby/1.9/benchmark.rb:295:in `realtime'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:40:in `render'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activerecord-3.2.8/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:39:in `render'
+E:/Documents/Dropbox/Ruby Projects/CrowdSINOS/app/controllers/concursos_controller.rb:50:in `create'
+org/jruby/RubyProc.java:259:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+E:/Documents/Dropbox/Ruby Projects/CrowdSINOS/app/controllers/concursos_controller.rb:45:in `create'
+org/jruby/RubyBasicObject.java:1667:in `__send__'
+org/jruby/RubyKernel.java:2060:in `send'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/abstract_controller/base.rb:167:in `process_action'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/rendering.rb:10:in `process_action'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/abstract_controller/callbacks.rb:18:in `process_action'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:417:in `_run__1513034945__process_action__1138760384__callbacks'
+org/jruby/RubyBasicObject.java:1667:in `__send__'
+org/jruby/RubyKernel.java:2060:in `send'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:390:in `_run_process_action_callbacks'
+org/jruby/RubyBasicObject.java:1673:in `__send__'
+org/jruby/RubyKernel.java:2064:in `send'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/abstract_controller/callbacks.rb:17:in `process_action'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/rescue.rb:29:in `process_action'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/notifications.rb:123:in `instrument'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activerecord-3.2.8/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/abstract_controller/base.rb:121:in `process'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/abstract_controller/rendering.rb:45:in `process'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal.rb:203:in `dispatch'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_controller/metal.rb:246:in `action'
+org/jruby/RubyProc.java:259:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:36:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/journey-1.0.4/lib/journey/router.rb:68:in `call'
+org/jruby/RubyArray.java:1612:in `each'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/routing/route_set.rb:600:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/rack-1.4.1/lib/rack/conditionalget.rb:35:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/head.rb:14:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/flash.rb:242:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/cookies.rb:339:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activerecord-3.2.8/lib/active_record/query_cache.rb:64:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activerecord-3.2.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:408:in `_run__55233992__call__58271749__callbacks'
+org/jruby/RubyBasicObject.java:1667:in `__send__'
+org/jruby/RubyKernel.java:2060:in `send'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:405:in `__run_callback'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:390:in `_run_call_callbacks'
+org/jruby/RubyBasicObject.java:1667:in `__send__'
+org/jruby/RubyKernel.java:2060:in `send'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/callbacks.rb:81:in `run_callbacks'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/railties-3.2.8/lib/rails/rack/logger.rb:26:in `call_app'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/railties-3.2.8/lib/rails/rack/logger.rb:16:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/activesupport-3.2.8/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/static.rb:62:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/railties-3.2.8/lib/rails/engine.rb:479:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/railties-3.2.8/lib/rails/application.rb:223:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/railties-3.2.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+C:/jruby-1.7.0.preview2/lib/ruby/1.9/webrick/httpserver.rb:138:in `service'
+C:/jruby-1.7.0.preview2/lib/ruby/1.9/webrick/httpserver.rb:94:in `run'
+C:/jruby-1.7.0.preview2/lib/ruby/1.9/webrick/httpserver.rb:72:in `run'
+C:/jruby-1.7.0.preview2/lib/ruby/1.9/webrick/server.rb:191:in `start_thread'
+C:/jruby-1.7.0.preview2/lib/ruby/1.9/webrick/server.rb:181:in `start_thread'
+  Rendered concursos/_form.html.erb (8.0ms)
+  Rendered concursos/new.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 37ms
+
+ActionView::Template::Error (E:/Documents/Dropbox/Ruby Projects/CrowdSINOS/app/views/concursos/_form.html.erb:5: syntax error, unexpected tIDENTIFIER
+
+@output_buffer.safe_concat('    <div id="error_explanation">
+                                      ^):
+    2: <%=  # encoding: utf-8  %>
+    3: <%= form_for(@concurso) do |f| %>
+    4:   <% if @concurso.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2><%= pluralize(@concurso.errors.count, "erro") %> nÃ£o permitiram o salvamento do concurso:</h2>
+    7: 
+    8:       <ul>
+  app/views/concursos/new.html.erb:3:in `_app_views_concursos_new_html_erb__1231366954_12448'
+  app/controllers/concursos_controller.rb:50:in `create'
+  app/controllers/concursos_controller.rb:45:in `create'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (66.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (83.0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:03 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:03 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:03 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:03 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:06 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[36mConcurso Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1[0m
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1
+  Rendered concursos/_form.html.erb (43.0ms)
+  Rendered concursos/new.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 77ms (Views: 60.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:06 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:06 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:06 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:06 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:07 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[36mConcurso Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1[0m
+  [1m[35mUsuario Load (1.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1
+  Rendered concursos/_form.html.erb (39.0ms)
+  Rendered concursos/new.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 81ms (Views: 65.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:07 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:07 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:07 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:07 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:08 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"02", "inicio(5i)"=>"13", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"02", "fim(5i)"=>"13", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[36mConcurso Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = '' LIMIT 1[0m
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 0 LIMIT 1
+  Rendered concursos/_form.html.erb (37.0ms)
+  Rendered concursos/new.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 79ms (Views: 55.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:08 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:08 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:08 -0300
+Served asset /usuarios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/usuarios.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 23:24:08 -0300
+Served asset /usuarios.js - 304 Not Modified (0ms)

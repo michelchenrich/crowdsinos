@@ -1,35 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Nome:</b>
+  <b><%= t('activerecord.attributes.concurso.nome') %>:</b>
   <%= @concurso.nome %>
 </p>
 
 <p>
-  <b>Inicio:</b>
+  <b><%= t('activerecord.attributes.concurso.inicio') %>:</b>
   <%= @concurso.inicio %>
 </p>
 
 <p>
-  <b>Fim:</b>
+  <b><%= t('activerecord.attributes.concurso.fim') %>:</b>
   <%= @concurso.fim %>
 </p>
 
 <p>
-  <b>Ganhador:</b>
-  <%= @concurso.ganhador_id %>
+  <b><%= t('activerecord.attributes.concurso.ganhador') %>:</b>
+  <%= @concurso.ganhador.nome unless @concurso.ganhador.nil? %>
 </p>
 
 <p>
-  <b>Contratante:</b>
-  <%= @concurso.contratante_id %>
+  <b><%= t('activerecord.attributes.concurso.contratante') %>:</b>
+  <%= @concurso.contratante.nome unless @concurso.contratante.nil? %>
 </p>
 
 <p>
-  <b>Premio:</b>
+  <b><%= t('activerecord.attributes.concurso.premio') %>:</b>
   <%= @concurso.premio %>
 </p>
 
 
-<%= link_to 'Edit', edit_concurso_path(@concurso) %> |
-<%= link_to 'Back', concursos_path %>
+<%= link_to 'Editar', edit_concurso_path(@concurso) %> |
+<%= link_to 'Voltar', concursos_path %>
