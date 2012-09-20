@@ -11,6 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20120920002135) do
+
+  create_table "concursos", :force => true do |t|
+    t.string   "nome"
+    t.datetime "inicio"
+    t.datetime "fim"
+    t.integer  "ganhador_id"
+    t.integer  "contratante_id"
+    t.float    "premio"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
 end

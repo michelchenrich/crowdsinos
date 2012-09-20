@@ -3,3 +3,14 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    models:
+      concurso: "Concurso"
+    attributes:
+      concurso:
+        nome: "Nome"
+        inicio: "Início"
+        fim: "Fim"
+        ganhador_id: "Ganhador"
+        contratante_id: "Contratante"
+        premio: "Prêmio"

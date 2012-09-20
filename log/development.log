@@ -1182,3 +1182,529 @@ Migrating to CreateEmployees (20120907171320)
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateConcursos (20120920001127)
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:13:41 -0300
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (88ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:17:34 -0300
+Processing by ConcursosController#index as HTML
+ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("concursos")
+Completed 500 Internal Server Error in 174ms
+
+ActiveRecord::StatementInvalid (ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("concursos")):
+  app/controllers/concursos_controller.rb:5:in `index'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateConcursos (20120920002135)
+  [1m[35m (1.0ms)[0m  CREATE TABLE "concursos" ("id" integer primary key autoincrement not null, "nome" varchar(255), "inicio" datetime, "fim" datetime, "ganhador_id" integer, "contratante_id" integer, "premio" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120920002135')[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35m (0.0ms)[0m  SELECT name, sql FROM sqlite_master WHERE tbl_name = "concursos" AND type = 'index'
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:18:00 -0300
+Processing by ConcursosController#index as HTML
+ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("concursos")
+Completed 500 Internal Server Error in 18ms
+
+ActiveRecord::StatementInvalid (ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("concursos")):
+  app/controllers/concursos_controller.rb:5:in `index'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:18:03 -0300
+Processing by ConcursosController#index as HTML
+ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("concursos")
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::StatementInvalid (ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("concursos")):
+  app/controllers/concursos_controller.rb:5:in `index'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:06 -0300
+Connecting to database specified by database.yml
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (2.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (17.0ms)
+Compiled concursos.css  (65ms)  (pid 4944)
+Compiled application.css  (154ms)  (pid 4944)
+Compiled concursos.js  (2704ms)  (pid 4944)
+Compiled application.js  (2853ms)  (pid 4944)
+Completed 200 OK in 4043ms (Views: 3943.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:12 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (1.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  Rendered concursos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 90ms (Views: 85.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:13 -0300
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 53ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:13 -0300
+Served asset /application.css - 200 OK (41ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:13 -0300
+Served asset /application.js - 200 OK (314ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:14 -0300
+Served asset /concursos.css - 200 OK (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:14 -0300
+Served asset /jquery_ujs.js - 200 OK (29ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:14 -0300
+Served asset /scaffolds.css - 200 OK (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:14 -0300
+Served asset /jquery.js - 200 OK (19ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:14 -0300
+Served asset /concursos.js - 200 OK (16ms)
+
+
+Started GET "/concursos/new" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:16 -0300
+Processing by ConcursosController#new as HTML
+  Rendered concursos/_form.html.erb (379.0ms)
+  Rendered concursos/new.html.erb within layouts/application (743.0ms)
+Completed 200 OK in 843ms (Views: 778.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:19:31 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"19", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"19", "ganhador_id"=>"0", "contratante_id"=>"0", "premio"=>"123"}, "commit"=>"Create Concurso"}
+  [1m[35mConcurso Exists (1.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = 'Teste' LIMIT 1
+Completed 500 Internal Server Error in 185ms
+
+NoMethodError (undefined method `Data final deve ser maior do que a data inicial' for #<Concurso:0x4a931343>):
+  app/models/concurso.rb:6:in `validate_each'
+  app/controllers/concursos_controller.rb:46:in `create'
+  app/controllers/concursos_controller.rb:45:in `create'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:20:04 -0300
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (0.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 120ms (Views: 50.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/concursos/new" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:20:05 -0300
+Processing by ConcursosController#new as HTML
+  Rendered concursos/_form.html.erb (148.0ms)
+  Rendered concursos/new.html.erb within layouts/application (152.0ms)
+Completed 200 OK in 207ms (Views: 173.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:20:08 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"20", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"20", "ganhador_id"=>"", "contratante_id"=>"", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[35mConcurso Exists (0.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = 'Teste' LIMIT 1
+  Rendered concursos/_form.html.erb (73.0ms)
+  Rendered concursos/new.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 121ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:20:37 -0300
+
+SyntaxError (E:/Documents/Dropbox/Ruby Projects/CrowdSINOS/app/models/concurso.rb:6: invalid multibyte char (US-ASCII)):
+  app/controllers/concursos_controller.rb:1:in `(root)'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:20:47 -0300
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 25.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concursos/new" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:20:49 -0300
+Processing by ConcursosController#new as HTML
+  Rendered concursos/_form.html.erb (85.0ms)
+  Rendered concursos/new.html.erb within layouts/application (89.0ms)
+Completed 200 OK in 137ms (Views: 112.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:20:51 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"20", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"20", "ganhador_id"=>"", "contratante_id"=>"", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[35mConcurso Exists (0.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = 'Teste' LIMIT 1
+  Rendered concursos/_form.html.erb (96.0ms)
+  Rendered concursos/new.html.erb within layouts/application (98.0ms)
+Completed 200 OK in 142ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:25:19 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"20", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"20", "ganhador_id"=>"", "contratante_id"=>"", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[36mConcurso Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = 'Teste' LIMIT 1[0m
+  Rendered concursos/_form.html.erb (101.0ms)
+  Rendered concursos/new.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 212ms (Views: 135.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:25:27 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"20", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"20", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[35mConcurso Exists (0.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = 'Teste' LIMIT 1
+  Rendered concursos/_form.html.erb (79.0ms)
+  Rendered concursos/new.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 119ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:25:32 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"20", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"21", "ganhador_id"=>"", "contratante_id"=>"0", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[36mConcurso Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = 'Teste' LIMIT 1[0m
+  [1m[35mSQL (5.0ms)[0m  INSERT INTO "concursos" ("contratante_id", "created_at", "fim", "ganhador_id", "inicio", "nome", "premio", "updated_at") VALUES (0, '2012-09-20 01:25:32.840000', '2012-09-20 01:21:00.000000', NULL, '2012-09-20 01:20:00.000000', 'Teste', NULL, '2012-09-20 01:25:32.840000')
+Redirected to http://localhost:3000/concursos/1
+Completed 302 Found in 150ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/concursos/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:25:32 -0300
+Processing by ConcursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcurso Load (0.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1[0m
+  Rendered concursos/show.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 151ms (Views: 145.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:25:36 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  Rendered concursos/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 59ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concursos/1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:25:49 -0300
+Processing by ConcursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcurso Load (0.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 1 LIMIT 1[0m
+  Rendered concursos/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:25:54 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (1.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  Rendered concursos/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 30ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concursos/new" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:25:55 -0300
+Processing by ConcursosController#new as HTML
+  Rendered concursos/_form.html.erb (48.0ms)
+  Rendered concursos/new.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 85ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:25:58 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"25", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"25", "ganhador_id"=>"", "contratante_id"=>"", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[36mConcurso Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = 'Teste' LIMIT 1[0m
+  Rendered concursos/_form.html.erb (53.0ms)
+  Rendered concursos/new.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 145ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:26:16 -0300
+Processing by ConcursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojmbF096nq7jkR2fyhofcxuDD/W1B827y/zo2dywHe8=", "concurso"=>{"nome"=>"Teste 2", "inicio(1i)"=>"2012", "inicio(2i)"=>"9", "inicio(3i)"=>"20", "inicio(4i)"=>"01", "inicio(5i)"=>"25", "fim(1i)"=>"2012", "fim(2i)"=>"9", "fim(3i)"=>"20", "fim(4i)"=>"01", "fim(5i)"=>"26", "ganhador_id"=>"", "contratante_id"=>"1", "premio"=>""}, "commit"=>"Create Concurso"}
+  [1m[35mConcurso Exists (0.0ms)[0m  SELECT 1 AS one FROM "concursos" WHERE "concursos"."nome" = 'Teste 2' LIMIT 1
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "concursos" ("contratante_id", "created_at", "fim", "ganhador_id", "inicio", "nome", "premio", "updated_at") VALUES (1, '2012-09-20 01:26:16.634000', '2012-09-20 01:26:00.000000', NULL, '2012-09-20 01:25:00.000000', 'Teste 2', NULL, '2012-09-20 01:26:16.634000')[0m
+Redirected to http://localhost:3000/concursos/2
+Completed 302 Found in 148ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/concursos/2" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:26:16 -0300
+Processing by ConcursosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" WHERE "concursos"."id" = 2 LIMIT 1
+  Rendered concursos/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:26:16 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:26:16 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:26:21 -0300
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:26:22 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:26:22 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos/new" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:40:52 -0300
+Processing by ConcursosController#new as HTML
+  Rendered concursos/_form.html.erb (46.0ms)
+  Rendered concursos/new.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:40:53 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:40:53 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:44:22 -0300
+Connecting to database specified by database.yml
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 450ms (Views: 293.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/rails.png" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:44:24 -0300
+Served asset /rails.png - 304 Not Modified (9ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:44:30 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  Rendered concursos/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 56ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:44:30 -0300
+Served asset /concursos.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:44:31 -0300
+Served asset /concursos.js - 304 Not Modified (10ms)
+
+
+Started GET "/concursos/new" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:44:32 -0300
+Processing by ConcursosController#new as HTML
+  Rendered concursos/_form.html.erb (179.0ms)
+  Rendered concursos/new.html.erb within layouts/application (194.0ms)
+Completed 500 Internal Server Error in 207ms
+
+ActionView::Template::Error (undefined method `-' for "translation missing: pt.date.order":String):
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :inicio %><br />
+    20:     <%= f.datetime_select :inicio %>
+    21:   </div>
+    22:   <div class="field">
+    23:     <%= f.label :fim %><br />
+  app/views/concursos/_form.html.erb:20:in `_app_views_concursos__form_html_erb__1308413243_7088'
+  app/views/concursos/_form.html.erb:1:in `_app_views_concursos__form_html_erb__1308413243_7088'
+  app/views/concursos/new.html.erb:3:in `_app_views_concursos_new_html_erb___1798083430_7084'
+  app/controllers/concursos_controller.rb:29:in `new'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (66.0ms)
+
+
+Started GET "/concursos/new" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:45:51 -0300
+Connecting to database specified by database.yml
+Processing by ConcursosController#new as HTML
+  Rendered concursos/_form.html.erb (123.0ms)
+  Rendered concursos/new.html.erb within layouts/application (147.0ms)
+Completed 500 Internal Server Error in 348ms
+
+ActionView::Template::Error (undefined method `-' for "translation missing: pt.date.order":String):
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :inicio %><br />
+    20:     <%= f.datetime_select :inicio %>
+    21:   </div>
+    22:   <div class="field">
+    23:     <%= f.label :fim %><br />
+  app/views/concursos/_form.html.erb:20:in `_app_views_concursos__form_html_erb__321442918_6750'
+  app/views/concursos/_form.html.erb:1:in `_app_views_concursos__form_html_erb__321442918_6750'
+  app/views/concursos/new.html.erb:3:in `_app_views_concursos_new_html_erb___1330430984_6746'
+  app/controllers/concursos_controller.rb:29:in `new'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (34.0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:46:02 -0300
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (2.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 197ms (Views: 188.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:46:02 -0300
+Served asset /concursos.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:46:02 -0300
+Served asset /concursos.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/rails.png" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:46:23 -0300
+Served asset /rails.png - 304 Not Modified (8ms)
+
+
+Started GET "/assets/rails.png" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:48:00 -0300
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (39ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:48:04 -0300
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (2.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 468ms (Views: 263.0ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:48:04 -0300
+Served asset /concursos.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:48:04 -0300
+Served asset /concursos.js - 304 Not Modified (8ms)
+
+
+Started GET "/concursos/new" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:48:07 -0300
+Processing by ConcursosController#new as HTML
+  Rendered concursos/_form.html.erb (186.0ms)
+  Rendered concursos/new.html.erb within layouts/application (200.0ms)
+Completed 200 OK in 233ms (Views: 230.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:48:07 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:48:07 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:48:35 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (0.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  Rendered concursos/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:48:35 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:48:35 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:52:12 -0300
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (1.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 71ms (Views: 67.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:52:12 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:52:12 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:52:47 -0300
+Processing by ConcursosController#index as HTML
+  [1m[35mConcurso Load (1.0ms)[0m  SELECT "concursos".* FROM "concursos" 
+  Rendered concursos/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 72ms (Views: 57.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:52:47 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:52:47 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/concursos" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:53:19 -0300
+Processing by ConcursosController#index as HTML
+  [1m[36mConcurso Load (0.0ms)[0m  [1mSELECT "concursos".* FROM "concursos" [0m
+  Rendered concursos/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:53:19 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-19 22:53:19 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)

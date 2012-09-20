@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome: MyString
+  inicio: 2012-09-19 21:21:35
+  fim: 2012-09-19 21:21:35
+  ganhador_id: 1
+  contratante_id: 1
+  premio: 1.5
+
+two:
+  nome: MyString
+  inicio: 2012-09-19 21:21:35
+  fim: 2012-09-19 21:21:35
+  ganhador_id: 1
+  contratante_id: 1
+  premio: 1.5
