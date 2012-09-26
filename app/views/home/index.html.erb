@@ -1,0 +1,17 @@
+<h1>CrowdSinos!!</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<div>
+<div id="user_nav">
+  
+      <% if current_user %>
+        <%= link_to "Edit Profile", edit_user_path(current_user.id)%>
+        <%= link_to "Logout", :logout%>
+      <% else %>
+        <%= link_to "Register", new_user_path%> | 
+        <%= link_to "Login", :login %>
+      <% end %>
+</div>
+</div>
+    
+
