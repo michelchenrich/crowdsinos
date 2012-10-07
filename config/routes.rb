@@ -1,19 +1,10 @@
 CrowdSINOS::Application.routes.draw do 
-  
-  
-
-  resources :concursos
+  resources :contests
   resources :users
   resources :user_sessions
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
 
-  
-  
-  #Coisas de login, não mexer!
-  #/login "login", :controller => "user_sessions", :action => "new"
-  #logout "logout", :controller => "user_sessions", :action => "destroy"
-  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

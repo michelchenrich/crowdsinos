@@ -11,17 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120922035041) do
+ActiveRecord::Schema.define(:version => 20121007165626) do
 
-  create_table "concursos", :force => true do |t|
-    t.string   "nome"
-    t.datetime "inicio"
-    t.datetime "fim"
-    t.integer  "ganhador_id"
-    t.integer  "contratante_id"
-    t.float    "premio"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+  create_table "contests", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.date     "start"
+    t.date     "end"
+    t.integer  "winner_id"
+    t.integer  "contractor_id"
+    t.float    "prize"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "user_sessions", :force => true do |t|
+    t.string   "username"
+    t.string   "password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -33,14 +41,7 @@ ActiveRecord::Schema.define(:version => 20120922035041) do
     t.string   "persistence_token"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-  end
-
-  create_table "usuarios", :force => true do |t|
-    t.string   "nome"
-    t.string   "email"
-    t.string   "senha"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "type"
   end
 
 end

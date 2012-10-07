@@ -9039,3 +9039,3368 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 19:49:28 -0300
 Served asset /application.js - 304 Not Modified (4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:03 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (886.0ms)
+Compiled home.css  (164ms)  (pid 4676)
+Compiled user_sessions.css  (18ms)  (pid 4676)
+Compiled users.css  (10ms)  (pid 4676)
+Compiled application.css  (573ms)  (pid 4676)
+Compiled home.js  (2563ms)  (pid 4676)
+Compiled user_sessions.js  (7ms)  (pid 4676)
+Compiled users.js  (6ms)  (pid 4676)
+Compiled application.js  (2815ms)  (pid 4676)
+Completed 200 OK in 5861ms (Views: 5846.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /application.css - 200 OK (294ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /home.css - 200 OK (14ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /users.css - 200 OK (13ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /scaffolds.css - 200 OK (9ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /concursos.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /home.js - 200 OK (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /jquery.js - 200 OK (66ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /users.js - 200 OK (13ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /concursos.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /jquery_ujs.js - 200 OK (10ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:11 -0300
+Served asset /user_sessions.js - 200 OK (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:12 -0300
+Served asset /application.js - 200 OK (117ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:12 -0300
+Served asset /user_sessions.css - 200 OK (8ms)
+
+
+Started GET "/login" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:20 -0300
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (159.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (208.0ms)
+Completed 200 OK in 293ms (Views: 289.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:21 -0300
+Served asset /concursos.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:21 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started POST "/user_sessions" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:29 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T7aBbH1/3sHN5anXsJLXx5UrU+jGtD+VPJKUqzijPbw=", "user_session"=>{"username"=>"michel", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[36mUser Load (11.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".username LIKE 'michel') LIMIT 1[0m
+  Rendered user_sessions/_form.html.erb (26.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 181ms (Views: 104.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:29 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:29 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/user_sessions" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:31 -0300
+Processing by UserSessionsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `All' for UserSession:Class):
+  app/controllers/user_sessions_controller.rb:5:in `index'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.0ms)
+
+
+Started GET "/users/new" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:41 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (30.0ms)
+  Rendered users/new.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 152ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:42 -0300
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:42 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:42 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:42 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:42 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:42 -0300
+Served asset /concursos.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:42 -0300
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:42 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:57 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T7aBbH1/3sHN5anXsJLXx5UrU+jGtD+VPJKUqzijPbw=", "user"=>{"username"=>"michel", "email"=>"michelchenrich@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michelchenrich@gmail.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('michel') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."persistence_token" = '92b3b23d8af7683330c108da2834459803356e936c5070b3ebd1b85051b34dc7083489c5a421f6d7331e92f9c0ed7a141c5ed046f2739d8b234fc04391c6b128' LIMIT 1
+  [1m[36mSQL (13.0ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "password", "password_salt", "persistence_token", "updated_at", "username") VALUES ('2012-09-27 00:08:58.119000', 'ffb3db01aa7a040176d7468c592c3f40f8b02d176f7028a68af72fff4165d7d8057409b9a9a2d206c1a290bd5cad53bdbce21492e6e454912edb74b7d163427d', 'michelchenrich@gmail.com', NULL, 'FPVyiwaWdYc4qU3tzCnE', '92b3b23d8af7683330c108da2834459803356e936c5070b3ebd1b85051b34dc7083489c5a421f6d7331e92f9c0ed7a141c5ed046f2739d8b234fc04391c6b128', '2012-09-27 00:08:58.119000', 'michel')[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 305ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/users/3" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:58 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 43ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:58 -0300
+Served asset /concursos.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:58 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:58 -0300
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:58 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:58 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:58 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:58 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:08:58 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:07 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:07 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:07 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:07 -0300
+Served asset /user_sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:07 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:08 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:08 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:08 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:08 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:22 -0300
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '92b3b23d8af7683330c108da2834459803356e936c5070b3ebd1b85051b34dc7083489c5a421f6d7331e92f9c0ed7a141c5ed046f2739d8b234fc04391c6b128' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (94.0ms)
+Completed 200 OK in 135ms (Views: 135.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:22 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:23 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:23 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:23 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:23 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:23 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:23 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:23 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/3/edit" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:25 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '92b3b23d8af7683330c108da2834459803356e936c5070b3ebd1b85051b34dc7083489c5a421f6d7331e92f9c0ed7a141c5ed046f2739d8b234fc04391c6b128' LIMIT 1[0m
+  Rendered users/_form.html.erb (32.0ms)
+  Rendered users/edit.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 87ms (Views: 79.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:25 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:25 -0300
+Served asset /home.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:25 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:25 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:25 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:25 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:25 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:25 -0300
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/users" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:29 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:29 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:29 -0300
+Served asset /home.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:29 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:29 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:29 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:29 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:29 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-09-26 21:09:29 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120922035041)
+  [1m[35m (7.0ms)[0m  DROP TABLE "users"
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20120922035041'[0m
+Migrating to CreateConcursos (20120920002135)
+  [1m[35m (8.0ms)[0m  DROP TABLE "concursos"
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20120920002135'[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35m (0.0ms)[0m  SELECT name, sql FROM sqlite_master WHERE tbl_name = "usuarios" AND type = 'index'
+Connecting to database specified by database.yml
+ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("schema_migrations")
+  [1m[36m (312.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  SELECT name, sql FROM sqlite_master WHERE tbl_name = "schema_migrations" AND type = 'index'
+  [1m[36m (117.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("schema_info")
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateConcursos (20120920002135)
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "concursos" ("id" integer primary key autoincrement not null, "nome" varchar(255), "inicio" datetime, "fim" datetime, "ganhador_id" integer, "contratante_id" integer, "premio" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120920002135')
+Migrating to CreateUsers (20120922035041)
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "users" ("id" integer primary key autoincrement not null, "username" varchar(255), "email" varchar(255), "password" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120922035041')
+Migrating to CreateUserSessions (20120926214257)
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "user_sessions" ("id" integer primary key autoincrement not null, "username" varchar(255), "password" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120926214257')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36m (0.0ms)[0m  [1mSELECT name, sql FROM sqlite_master WHERE tbl_name = "concursos" AND type = 'index'[0m
+  [1m[35m (0.0ms)[0m  SELECT name, sql FROM sqlite_master WHERE tbl_name = "user_sessions" AND type = 'index'
+  [1m[36m (0.0ms)[0m  [1mSELECT name, sql FROM sqlite_master WHERE tbl_name = "users" AND type = 'index'[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (8.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUserSessions (20120926214257)
+  [1m[35m (0.0ms)[0m  DROP TABLE "user_sessions"
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20120926214257'[0m
+Migrating to CreateUsers (20120922035041)
+  [1m[35m (0.0ms)[0m  DROP TABLE "users"
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20120922035041'[0m
+Migrating to CreateConcursos (20120920002135)
+  [1m[35m (8.0ms)[0m  DROP TABLE "concursos"
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20120920002135'[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("contests")
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120922035041)
+  [1m[35m (1.0ms)[0m  CREATE TABLE "users" ("id" integer primary key autoincrement not null, "username" varchar(255), "email" varchar(255), "password" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120922035041')[0m
+Migrating to CreateUserSessions (20120926214257)
+  [1m[35m (2.0ms)[0m  CREATE TABLE "user_sessions" ("id" integer primary key autoincrement not null, "username" varchar(255), "password" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120926214257')[0m
+Migrating to CreateContests (20121007162713)
+  [1m[35m (6.0ms)[0m  CREATE TABLE "contests" ("id" integer primary key autoincrement not null, "name" varchar(255), "description" text, "start" date, "end" date, "winner_id" integer, "contractor_id" integer, "prize" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121007162713')[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35m (1.0ms)[0m  SELECT name, sql FROM sqlite_master WHERE tbl_name = "contests" AND type = 'index'
+  [1m[36m (0.0ms)[0m  [1mSELECT name, sql FROM sqlite_master WHERE tbl_name = "user_sessions" AND type = 'index'[0m
+  [1m[35m (0.0ms)[0m  SELECT name, sql FROM sqlite_master WHERE tbl_name = "users" AND type = 'index'
+ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("contests")
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:44 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (126.0ms)
+Compiled contests.css  (62ms)  (pid 3108)
+Compiled application.css  (251ms)  (pid 3108)
+Compiled contests.js  (2763ms)  (pid 3108)
+Compiled application.js  (2914ms)  (pid 3108)
+Completed 200 OK in 4328ms (Views: 4326.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:49 -0300
+Served asset /application.css - 200 OK (133ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:49 -0300
+Served asset /scaffolds.css - 200 OK (493ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:50 -0300
+Served asset /jquery.js - 200 OK (13ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:50 -0300
+Served asset /user_sessions.css - 200 OK (9ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:50 -0300
+Served asset /contests.css - 200 OK (80ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:50 -0300
+Served asset /users.css - 200 OK (23ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:50 -0300
+Served asset /home.css - 200 OK (7ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:50 -0300
+Served asset /user_sessions.js - 200 OK (17ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:50 -0300
+Served asset /concursos.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:50 -0300
+Served asset /concursos.js - 304 Not Modified (44ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:50 -0300
+Served asset /jquery_ujs.js - 200 OK (18ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:50 -0300
+Served asset /application.js - 200 OK (91ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:51 -0300
+Served asset /contests.js - 200 OK (7ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:51 -0300
+Served asset /home.js - 200 OK (19ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:51 -0300
+Served asset /users.js - 200 OK (16ms)
+
+
+Started GET "/users/new" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:56 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (264.0ms)
+  Rendered users/new.html.erb within layouts/application (299.0ms)
+Completed 200 OK in 440ms (Views: 370.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:56 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:09:56 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started POST "/users" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:09 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "user"=>{"username"=>"Michel Henrich", "email"=>"michelchenrich@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michelchenrich@gmail.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('Michel Henrich') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "password", "password_salt", "persistence_token", "updated_at", "username") VALUES ('2012-10-07 17:10:09.648000', '5a82192339217ff51e1c64cac2cccd5324c36032cd352e6da8e8a6b14349783b838369841820181c75c36d4de209851c3e55ed7bc7f41a8ae886b0b820239325', 'michelchenrich@gmail.com', NULL, 'jZIB1AT7pDMqZnIHJCm', '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1', '2012-10-07 17:10:09.648000', 'Michel Henrich')
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 445ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/users/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:09 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 98ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:09 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:09 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:14 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 62ms (Views: 57.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:15 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:15 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:17 -0300
+Processing by ContestsController#index as HTML
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" [0m
+  Rendered contests/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 89ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:18 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:18 -0300
+Served asset /concursos.js - 304 Not Modified (2ms)
+
+
+Started GET "/contests/new" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:20 -0300
+Processing by ContestsController#new as HTML
+  Rendered contests/_form.html.erb (60.0ms)
+  Rendered contests/new.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 133ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:20 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:10:20 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:13:47 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (74.0ms)
+Completed 500 Internal Server Error in 85ms
+
+ActionView::Template::Error (can not load translations from E:/Documents/Dropbox/Ruby Projects/CrowdSINOS/config/locales/en.yml, expected it to return a hash, but does not):
+    4: <div>
+    5: <div id="user_nav">
+    6:   
+    7:       <% if current_user %>
+    8:         <%= link_to "Edit Profile", edit_user_path(current_user.id)%>
+    9:         <%= link_to "Logout", :logout%>
+    10:       <% else %>
+  app/models/user.rb:2:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/controllers/application_controller.rb:11:in `current_user_session'
+  app/controllers/application_controller.rb:16:in `current_user'
+  app/views/home/index.html.erb:7:in `_app_views_home_index_html_erb__1253793990_6964'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (48.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:15 -0300
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (294.0ms)
+Completed 200 OK in 344ms (Views: 341.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:16 -0300
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/users/1/edit" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:21 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1[0m
+  Rendered users/_form.html.erb (17.0ms)
+  Rendered users/edit.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 114ms (Views: 101.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:21 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /contests.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:22 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:24 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/contests" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Processing by ContestsController#index as HTML
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" [0m
+  Rendered contests/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 51ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:35 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/contests/new" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Processing by ContestsController#new as HTML
+  Rendered contests/_form.html.erb (45.0ms)
+  Rendered contests/new.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 109ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /concursos.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:37 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/contests" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:47 -0300
+Processing by ContestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "contest"=>{"name"=>"Test", "description"=>"test", "start(1i)"=>"2012", "start(2i)"=>"10", "start(3i)"=>"7", "end(1i)"=>"2012", "end(2i)"=>"10", "end(3i)"=>"7", "winner_id"=>"", "contractor_id"=>"0", "prize"=>"123123123"}, "commit"=>"Create Contest"}
+  [1m[35mContest Exists (0.0ms)[0m  SELECT 1 AS one FROM "contests" WHERE "contests"."name" = 'Test' LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  Rendered contests/_form.html.erb (55.0ms)
+  Rendered contests/new.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 253ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:47 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:47 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:47 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:47 -0300
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:47 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:47 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:47 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:47 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:48 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:48 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:48 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:48 -0300
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:48 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:48 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:48 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/contests" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Processing by ContestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "contest"=>{"name"=>"Test", "description"=>"test", "start(1i)"=>"2012", "start(2i)"=>"10", "start(3i)"=>"7", "end(1i)"=>"2012", "end(2i)"=>"10", "end(3i)"=>"8", "winner_id"=>"", "contractor_id"=>"0", "prize"=>"123123123"}, "commit"=>"Create Contest"}
+  [1m[35mContest Exists (2.0ms)[0m  SELECT 1 AS one FROM "contests" WHERE "contests"."name" = 'Test' LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  Rendered contests/_form.html.erb (52.0ms)
+  Rendered contests/new.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 98ms (Views: 79.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /contests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:53 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/contests" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:57 -0300
+Processing by ContestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "contest"=>{"name"=>"Test", "description"=>"test", "start(1i)"=>"2012", "start(2i)"=>"10", "start(3i)"=>"7", "end(1i)"=>"2012", "end(2i)"=>"10", "end(3i)"=>"8", "winner_id"=>"", "contractor_id"=>"1", "prize"=>"123123123"}, "commit"=>"Create Contest"}
+  [1m[35mContest Exists (1.0ms)[0m  SELECT 1 AS one FROM "contests" WHERE "contests"."name" = 'Test' LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "contests" ("contractor_id", "created_at", "description", "end", "name", "prize", "start", "updated_at", "winner_id") VALUES (1, '2012-10-07 17:14:57.884000', 'test', '2012-10-08', 'Test', 123123123.0, '2012-10-07', '2012-10-07 17:14:57.884000', NULL)
+Redirected to http://localhost:3000/contests/1
+Completed 302 Found in 384ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:14:58 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    22: 
+    23: <p>
+    24:   <b<%= Contest.human_attribute_name :winner %></b>
+    25:   <%= @contest.winner.name %>
+    26: </p>
+    27: 
+    28: <p>
+  app/views/contests/show.html.erb:25:in `_app_views_contests_show_html_erb__656873847_11794'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:15:57 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (1.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  Rendered contests/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    22: 
+    23: <p>
+    24:   <b<%= Contest.human_attribute_name :winner %></b>
+    25:   <%= @contest.winner.name %>
+    26: </p>
+    27: 
+    28: <p>
+  app/views/contests/show.html.erb:25:in `_app_views_contests_show_html_erb__656873847_11794'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:16:00 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (1.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    22: 
+    23: <p>
+    24:   <b<%= Contest.human_attribute_name :winner %></b>
+    25:   <%= @contest.winner.name %>
+    26: </p>
+    27: 
+    28: <p>
+  app/views/contests/show.html.erb:25:in `_app_views_contests_show_html_erb__656873847_11794'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:16:26 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContractor Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x858618b>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %></b>
+    30:   <%= @contest.contractor.name %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__656873847_11996'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:16:50 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (1.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x46d05899>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %></b>
+    30:   <%= @contest.contractor.name unless @contest.contractor.nil? %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__656873847_12066'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:16:59 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x26bbf229>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %></b>
+    30:   <%= @contest.contractor.name unless @contest.contractor.nil? %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__656873847_12066'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:18:02 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x2b00d71a>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %></b>
+    30:   <%= @contest.contractor.name if not @contest.contractor.nil? %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__656873847_12206'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:18:04 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x72d67c4>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %></b>
+    30:   <%= @contest.contractor.name if not @contest.contractor.nil? %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__656873847_12206'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:18:05 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (1.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (29.0ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x55e8f6a9>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %></b>
+    30:   <%= @contest.contractor.name if not @contest.contractor.nil? %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__656873847_12206'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:18:06 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContractor Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x4c4fb470>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %></b>
+    30:   <%= @contest.contractor.name if not @contest.contractor.nil? %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__656873847_12206'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:18:06 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (1.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x2e54d95b>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %></b>
+    30:   <%= @contest.contractor.name if not @contest.contractor.nil? %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__656873847_12206'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:18:07 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x59404e2e>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %></b>
+    30:   <%= @contest.contractor.name if not @contest.contractor.nil? %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__656873847_12206'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:18:07 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (1.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContractor Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/show.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x7daefa56>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %></b>
+    30:   <%= @contest.contractor.name if not @contest.contractor.nil? %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__656873847_12206'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (9.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120922035041)
+Migrating to CreateUserSessions (20120926214257)
+Migrating to CreateContests (20121007162713)
+Migrating to AddTypeToUsers (20121007165626)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "users" ADD "type" varchar(255)[0m
+  [1m[35m (21.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121007165626')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36m (0.0ms)[0m  [1mSELECT name, sql FROM sqlite_master WHERE tbl_name = "contests" AND type = 'index'[0m
+  [1m[35m (0.0ms)[0m  SELECT name, sql FROM sqlite_master WHERE tbl_name = "user_sessions" AND type = 'index'
+  [1m[36m (0.0ms)[0m  [1mSELECT name, sql FROM sqlite_master WHERE tbl_name = "users" AND type = 'index'[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:17 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (143.0ms)
+Completed 200 OK in 561ms (Views: 556.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:18 -0300
+Served asset /user_sessions.css - 304 Not Modified (32ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:19 -0300
+Served asset /home.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:19 -0300
+Served asset /concursos.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:19 -0300
+Served asset /scaffolds.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:19 -0300
+Served asset /application.css - 304 Not Modified (62ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:19 -0300
+Served asset /contests.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:19 -0300
+Served asset /users.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:19 -0300
+Served asset /home.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:19 -0300
+Served asset /contests.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:19 -0300
+Served asset /jquery.js - 304 Not Modified (66ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:19 -0300
+Served asset /user_sessions.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:20 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:20 -0300
+Served asset /users.js - 304 Not Modified (48ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:20 -0300
+Served asset /concursos.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:20 -0300
+Served asset /application.js - 304 Not Modified (111ms)
+
+
+Started GET "/users/1/edit" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:21 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1
+  Rendered users/_form.html.erb (118.0ms)
+  Rendered users/edit.html.erb within layouts/application (132.0ms)
+Completed 500 Internal Server Error in 192ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Users):
+    29:   </div>
+    30:   <div class="field">
+    31:     <%= f.label :type %><br />
+    32:     <%= f.select :range, Users.select_options %>
+    33:   </div>
+    34:   <div class="actions">
+    35:     <%= f.submit %>
+  app/views/users/_form.html.erb:32:in `_app_views_users__form_html_erb__1515872817_7466'
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1515872817_7466'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___934012152_7462'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.0ms)
+
+
+Started GET "/users/1/edit" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:25:42 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1[0m
+  Rendered users/_form.html.erb (33.0ms)
+  Rendered users/edit.html.erb within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (undefined method `range' for #<User:0x3e15085c>):
+    29:   </div>
+    30:   <div class="field">
+    31:     <%= f.label :type %><br />
+    32:     <%= f.select :range, User.select_options %>
+    33:   </div>
+    34:   <div class="actions">
+    35:     <%= f.submit %>
+  app/views/users/_form.html.erb:32:in `_app_views_users__form_html_erb__1515872817_7548'
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1515872817_7548'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___934012152_7462'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.0ms)
+
+
+Started GET "/users/1/edit" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1
+  Rendered users/_form.html.erb (38.0ms)
+  Rendered users/edit.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 97ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /user_sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:09 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started PUT "/users/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:29:17 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "user"=>{"username"=>"Michel Henrich", "email"=>"michelchenrich@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "type"=>"Contractor"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1[0m
+Completed 500 Internal Server Error in 16ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: type):
+  app/controllers/users_controller.rb:62:in `update'
+  app/controllers/users_controller.rb:61:in `update'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.0ms)
+
+
+Started GET "/users/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:14 -0300
+
+SyntaxError (E:/Documents/Dropbox/Ruby Projects/CrowdSINOS/app/models/user.rb:3: syntax error, unexpected tSYMBEG
+
+  attr_accessible :email, :password, :username, :password_confirmation. :type
+                                                                        ^):
+  app/controllers/users_controller.rb:1:in `(root)'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (11.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.0ms)
+
+
+Started GET "/users/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 72ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /contests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:25 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:26 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:26 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/users" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:28 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 51ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:28 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:28 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:28 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:28 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:28 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:28 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:28 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:29 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:29 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:29 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:29 -0300
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:29 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:29 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:29 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:30:29 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:12 -0300
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 40ms (Views: 35.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:16 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 36.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:18 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:19 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:19 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:19 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:31:19 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /contests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:38 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:39 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:53 -0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 185ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:54 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/new" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:55 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (18.0ms)
+  Rendered users/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:32:56 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:45 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered home/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 60ms (Views: 55.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:46 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/new" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:49 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (15.0ms)
+  Rendered users/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:49 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:49 -0300
+Served asset /contests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:49 -0300
+Served asset /concursos.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:49 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:49 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:50 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:50 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:50 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:50 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:50 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:50 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:50 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:50 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:50 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:33:50 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:37:58 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered home/index.html.erb within layouts/application (152.0ms)
+Completed 200 OK in 535ms (Views: 531.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:37:59 -0300
+Served asset /concursos.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:37:59 -0300
+Served asset /home.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:37:59 -0300
+Served asset /application.css - 304 Not Modified (89ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /scaffolds.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /user_sessions.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (43ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /contests.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /users.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /user_sessions.js - 304 Not Modified (55ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /jquery.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /concursos.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /application.js - 304 Not Modified (72ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /contests.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /home.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:00 -0300
+Served asset /users.js - 304 Not Modified (6ms)
+
+
+Started GET "/users/new" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:03 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (39.0ms)
+  Rendered users/new.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 140ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /users.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:04 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/users" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:13 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "user"=>{"username"=>"Michel Henrich", "email"=>"michelchenrich@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "type"=>"Contractor"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('michelchenrich@gmail.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('Michel Henrich') LIMIT 1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."persistence_token" = '623df0fb82f6361c9100134e0868e94954091eb19b82b15faa959011d424d6228aa3c0d3a70e6c68b1dd5fd6533c61d25a752b5682179256e8d937d42801d4e1' LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '8ddeb7f635e2efab8d5a19a7e03ce28e6a3d8b07f44871f2bb117e559d88d1b51bdc9ab2ea6a3e358b0d6eec1221c9c77f56d50080cd8b055e81118547ff0cc1' LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "password", "password_salt", "persistence_token", "type", "updated_at", "username") VALUES ('2012-10-07 17:38:14.034000', '10533a85697e05e5927cdca3e8c2161b8529d9a1cd0037dea35c2e5f3a93ccc91a31ce1bb0d099c19ad5360b9ee1d81492063bdc595757d750862764acca2e44', 'michelchenrich@gmail.com', NULL, 'l6DcGv3WvHalepqoNqJY', '623df0fb82f6361c9100134e0868e94954091eb19b82b15faa959011d424d6228aa3c0d3a70e6c68b1dd5fd6533c61d25a752b5682179256e8d937d42801d4e1', 'Contractor', '2012-10-07 17:38:14.034000', 'Michel Henrich')
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 209ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/users/2" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 100ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:14 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:16 -0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 211ms (Views: 203.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /contests.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /contests.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:17 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:18 -0300
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '623df0fb82f6361c9100134e0868e94954091eb19b82b15faa959011d424d6228aa3c0d3a70e6c68b1dd5fd6533c61d25a752b5682179256e8d937d42801d4e1' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:23 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:24 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:24 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:24 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:24 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Processing by ContestsController#index as HTML
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" 
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."type" IN ('Contractor') AND "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/index.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 201ms (Views: 156.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /user_sessions.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:39 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/contests/1/edit" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  Rendered contests/_form.html.erb (37.0ms)
+  Rendered contests/edit.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 84ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:42 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started PUT "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Processing by ContestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "contest"=>{"name"=>"Test", "description"=>"test", "start(1i)"=>"2012", "start(2i)"=>"10", "start(3i)"=>"7", "end(1i)"=>"2012", "end(2i)"=>"10", "end(3i)"=>"8", "winner_id"=>"", "contractor_id"=>"0", "prize"=>"123123123.0"}, "commit"=>"Update Contest", "id"=>"1"}
+  [1m[36mContest Load (1.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1[0m
+  [1m[35mContest Exists (1.0ms)[0m  SELECT 1 AS one FROM "contests" WHERE ("contests"."name" = 'Test' AND "contests"."id" != 1) LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."type" IN ('Contractor') AND "users"."id" = 0 LIMIT 1[0m
+  Rendered contests/_form.html.erb (53.0ms)
+  Rendered contests/edit.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 154ms (Views: 82.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /concursos.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:45 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Processing by ContestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "contest"=>{"name"=>"Test", "description"=>"test", "start(1i)"=>"2012", "start(2i)"=>"10", "start(3i)"=>"7", "end(1i)"=>"2012", "end(2i)"=>"10", "end(3i)"=>"8", "winner_id"=>"", "contractor_id"=>"1", "prize"=>"123123123.0"}, "commit"=>"Update Contest", "id"=>"1"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  [1m[36mContest Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "contests" WHERE ("contests"."name" = 'Test' AND "contests"."id" != 1) LIMIT 1[0m
+  [1m[35mContractor Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."type" IN ('Contractor') AND "users"."id" = 1 LIMIT 1
+  Rendered contests/_form.html.erb (54.0ms)
+  Rendered contests/edit.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 106ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:48 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Processing by ContestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "contest"=>{"name"=>"Test", "description"=>"test", "start(1i)"=>"2012", "start(2i)"=>"10", "start(3i)"=>"7", "end(1i)"=>"2012", "end(2i)"=>"10", "end(3i)"=>"8", "winner_id"=>"", "contractor_id"=>"1", "prize"=>"123123123.0"}, "commit"=>"Update Contest", "id"=>"1"}
+  [1m[36mContest Load (1.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1[0m
+  [1m[35mContest Exists (1.0ms)[0m  SELECT 1 AS one FROM "contests" WHERE ("contests"."name" = 'Test' AND "contests"."id" != 1) LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."type" IN ('Contractor') AND "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/_form.html.erb (54.0ms)
+  Rendered contests/edit.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 117ms (Views: 82.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:54 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:55 -0300
+Processing by ContestsController#index as HTML
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" 
+  [1m[36mContractor Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."type" IN ('Contractor') AND "users"."id" = 1 LIMIT 1[0m
+  Rendered contests/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /concursos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:38:56 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/contests/1/edit" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:08 -0300
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (1.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1
+  Rendered contests/_form.html.erb (30.0ms)
+  Rendered contests/edit.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:08 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:08 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:08 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:08 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:08 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:08 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:09 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:09 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:09 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:09 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:09 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:09 -0300
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:09 -0300
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:09 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:09 -0300
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started PUT "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:11 -0300
+Processing by ContestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDtlBZspi33g1HqqkDrvb5koygQwS5EaDMPEsJj3glY=", "contest"=>{"name"=>"Test", "description"=>"test", "start(1i)"=>"2012", "start(2i)"=>"10", "start(3i)"=>"7", "end(1i)"=>"2012", "end(2i)"=>"10", "end(3i)"=>"8", "winner_id"=>"", "contractor_id"=>"2", "prize"=>"123123123.0"}, "commit"=>"Update Contest", "id"=>"1"}
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1[0m
+  [1m[35mContest Exists (1.0ms)[0m  SELECT 1 AS one FROM "contests" WHERE ("contests"."name" = 'Test' AND "contests"."id" != 1) LIMIT 1
+  [1m[36mContractor Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."type" IN ('Contractor') AND "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  UPDATE "contests" SET "contractor_id" = 2, "updated_at" = '2012-10-07 17:39:11.338000' WHERE "contests"."id" = 1
+Redirected to http://localhost:3000/contests/1
+Completed 302 Found in 206ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:39:11 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1[0m
+  [1m[35mContractor Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."type" IN ('Contractor') AND "users"."id" = 2 LIMIT 1
+  Rendered contests/show.html.erb within layouts/application (29.0ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (undefined method `name' for #<Contractor:0x2fffdcc>):
+    27: 
+    28: <p>
+    29:   <b><%= Contest.human_attribute_name :contractor %>:</b>
+    30:   <%= @contest.contractor.name unless @contest.contractor.nil? %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/contests/show.html.erb:30:in `_app_views_contests_show_html_erb__1901323347_13428'
+  app/controllers/contests_controller.rb:18:in `show'
+
+
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered c:/jruby-1.7.0.preview2/lib/ruby/gems/shared/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/contests/1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (1.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = 1 LIMIT 1[0m
+  [1m[35mContractor Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."type" IN ('Contractor') AND "users"."id" = 2 LIMIT 1
+  Rendered contests/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 67ms (Views: 62.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /concursos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:06 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/contests" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:08 -0300
+Processing by ContestsController#index as HTML
+  [1m[36mContest Load (1.0ms)[0m  [1mSELECT "contests".* FROM "contests" [0m
+  [1m[35mContractor Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."type" IN ('Contractor') AND "users"."id" = 2 LIMIT 1
+  Rendered contests/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 45ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:08 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/concursos.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:08 -0300
+Served asset /concursos.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:08 -0300
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:08 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/concursos.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /concursos.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at 2012-10-07 14:40:09 -0300
+Served asset /application.js - 304 Not Modified (2ms)

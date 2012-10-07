@@ -1,20 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Username:</b>
+  <b><%= User.human_attribute_name :username %>:</b>
   <%= @user.username %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <b><%= User.human_attribute_name :email %>:</b>
   <%= @user.email %>
 </p>
 
 <p>
-  <b>Password:</b>
-  <%= @user.password %>
+  <b><%= User.human_attribute_name :type %>:</b>
+  <%= @user.type %>
 </p>
-
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

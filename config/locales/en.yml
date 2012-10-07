@@ -1,16 +1,4 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
-  activerecord:
-    models:
-      concurso: "Concurso"
-    attributes:
-      concurso:
-        nome: "Nome"
-        inicio: "Início"
-        fim: "Fim"
-        ganhador_id: "Ganhador"
-        contratante_id: "Contratante"
-        premio: "Prêmio"
+  hello: Hello World
