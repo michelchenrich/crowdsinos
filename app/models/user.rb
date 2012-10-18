@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
   end
   
   def self.select_options
-    descendants.map{ |child| child.to_s }.sort
+    return ["Contractor", "Designer"]
   end
 end

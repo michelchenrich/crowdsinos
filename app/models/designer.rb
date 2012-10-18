@@ -1,3 +1,4 @@
 class Designer < User
-  has_many :contests, :as => :winner
+  has_many :proposals
+  has_many :contests, :as => :winner, :through => :proposal
 end

@@ -1,0 +1,29 @@
+<h1>Listing contests</h1>
+
+<table>
+  <tr>
+    <th><%= Contest.human_attribute_name :name %></th>
+    <th><%= Contest.human_attribute_name :status %></th>
+    <th><%= Contest.human_attribute_name :start %></th>
+    <th><%= Contest.human_attribute_name :end %></th>
+    <th><%= Contest.human_attribute_name :prize %></th>
+    <th><%= Contest.human_attribute_name :contractor %></th>
+    <th><%= Contest.human_attribute_name :winner %></th>
+    <th></th>
+  </tr>
+
+<% @contests.each do |contest| %>
+  <tr>
+    <td><%= contest.name %></td>
+    <td><%= contest.status %></td>
+    <td><%= contest.start %></td>
+    <td><%= contest.end %></td>
+    <td><%= contest.prize %></td>
+    <td><%= contest.contractor.username unless contest.contractor.nil? %></td>
+    <td><%= contest.winner.username unless contest.winner.nil? %></td>
+    <td><%= link_to 'Show', contest %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

@@ -1,0 +1,2 @@
+module ProposalsControllerHelper
+end

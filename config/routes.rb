@@ -2,6 +2,12 @@ CrowdSINOS::Application.routes.draw do
   resources :contests
   resources :users
   resources :user_sessions
+  
+  match 'proposals/:contest_id', :controller => 'proposals', :action => 'index', :as => :proposals
+  match 'proposals/:contest_id/new', :controller => 'proposals', :action => 'new', :as => :new_proposal
+  match 'proposals/:contest_id/:proposal_id', :controller => 'proposals', :action => 'show', :as => :proposal
+  match 'proposals/:contest_id/create', :controller => 'proposals', :action => 'create'
+  
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
 
