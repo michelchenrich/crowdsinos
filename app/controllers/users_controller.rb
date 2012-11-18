@@ -50,9 +50,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id])
+    @user_session = UserSession.find
+    @user = current_user
+    
+    @user_session.destroy
     @user.destroy
-
+   
     respond_to do |format|
       format.html { redirect_to root_url, :notice => 'User profile was successfully deleted.' }
       format.json { head :no_content }

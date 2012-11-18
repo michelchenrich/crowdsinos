@@ -1,2 +1,4 @@
 <legend>Edit user profile</legend>
 <%= render :partial => 'form', :locals => { :new => false } %>
+<%= button_to 'Delete', :delete_user_profile, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger"%>
+    

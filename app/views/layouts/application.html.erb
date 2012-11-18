@@ -9,7 +9,7 @@
   <body>
     <div class="navbar">
       <div class="navbar-inner">
-        <a class="brand" href="/">CrowdSINOS</a>
+        <a class="brand" href="/"><%= current_user.nil? ? "CrowdSINOS" : current_user.username %></a>
         <ul class="nav">
           <% unless current_user.nil? %>
             <li><%= link_to "Edit user profile", :edit_user_profile %></li>

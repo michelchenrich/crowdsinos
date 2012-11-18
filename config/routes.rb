@@ -5,11 +5,11 @@ CrowdSINOS::Application.routes.draw do
   
   put '/contest/:contest_id/set_winner/:proposal_id' => 'contests#set_winner', :as => 'set_winner'
   
-  post '/register'            => 'users#create',  :as => :register
-  get  '/register'            => 'users#new',     :as => :register
-  get  '/delete_user_profile' => 'users#destroy', :as => :delete_user_profile
-  get  '/edit_user_profile'   => 'users#edit',    :as => :edit_user_profile
-  put  '/edit_user_profile'   => 'users#update',  :as => :edit_user_profile
+  post   '/register'            => 'users#create',  :as => :register
+  get    '/register'            => 'users#new',     :as => :register
+  delete '/delete_user_profile' => 'users#destroy', :as => :delete_user_profile
+  get    '/edit_user_profile'   => 'users#edit',    :as => :edit_user_profile
+  put    '/edit_user_profile'   => 'users#update',  :as => :edit_user_profile
   
   post '/login'  => 'user_sessions#create',  :as => :login
   get  '/login'  => 'user_sessions#new',     :as => :login
