@@ -1,5 +1,5 @@
 class UserSession < Authlogic::Session::Base
-  #Só pra salvar essa maraVILHA de link
+  #Just in case
   #http://www.logansbailey.com/2010/10/06/how-to-setup-authlogic-in-rails-3/
   
   def to_key

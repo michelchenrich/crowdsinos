@@ -1,0 +1,23 @@
+<d1 class="dl-horizontal">
+  <dt><%= Proposal.human_attribute_name :description %></dt>
+  <dd><%= proposal.description %></dd>
+
+  <dd><%= link_to image_tag(proposal.image.url, :class => "img-polaroid", :size => "400x300"), proposal.image.url(:original), :popup => ['original_image', 'height=700,width=900'] %></dd>
+
+  <dt><%= Proposal.human_attribute_name :designer %></dt>
+  <dd><%= proposal.designer.username unless proposal.designer.nil? %></dd>
+
+  <dt><%= Proposal.human_attribute_name :created_at %></dt>
+  <dd><%= time_ago_in_words proposal.created_at %> ago</dd>
+
+  <% if proposal.contest.is_open? %>
+    <% if proposal.designer == current_user %>
+      <dd><%= button_to 'Delete', contest_proposal_path(proposal.contest, proposal), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary"%></dd>
+    <% end %> 
+
+    <% if proposal.contest.contractor == current_user %>
+      <dd><%= button_to 'Set as winner',  set_winner_path(proposal.contest, proposal) , :method => :put, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary" %></dd>
+    <% end %>
+  <% end %> 
+  <br>
+</d1>

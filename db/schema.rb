@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121018001405) do
+ActiveRecord::Schema.define(:version => 20121117224446) do
 
   create_table "contests", :force => true do |t|
     t.string   "name"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(:version => 20121018001405) do
     t.date     "start"
     t.date     "end"
     t.integer  "contractor_id"
-    t.float    "prize"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.decimal  "prize",               :precision => 8, :scale => 2
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
     t.boolean  "canceled"
     t.integer  "winning_proposal_id"
   end

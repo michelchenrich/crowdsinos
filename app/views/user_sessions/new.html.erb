@@ -1,5 +1,31 @@
-<h1>Login - CrowdSinos</h1>
+<legend>Login</legend>
+<%= form_for @user_session, :url => :login do |f| %>
+  <% if @user_session.errors.any? %>
+    <div class="alert alert-error">
+      <ul>
+        <% @user_session.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <d1 class="dl-horizontal">
+    <% if @user_session.errors.include? :username %>
+      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
+    <% else %>
+      <dt>
+    <% end %>
+    <%= Contest.human_attribute_name :username %></dt>
+    <dd><%= f.text_field :username %></dd>
 
-<%= render 'form' %>
+    <% if @user_session.errors.include? :password %>
+      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
+    <% else %>
+      <dt>
+    <% end %>
+    <%= Contest.human_attribute_name :password %></dt>
+    <dd><%= f.password_field :password %></dd>
 
-<%= link_to 'Back', user_sessions_path %>
+    <dd><%= f.submit 'Login', :class => "btn btn-primary" %></dd>
+  </d1>
+<% end %>

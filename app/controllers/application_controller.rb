@@ -9,10 +9,16 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def unauthorized
+    respond_to do |format|
+      format.html { render :file => "#{Rails.root}/public/401.html", :status => :unauthorized }
+      format.xml { head :unauthorized }
+      format.any { head :unauthorized }
+    end
+  end
+  
   #BEGIN COISAS DO LOGIN
   helper_method :current_user_session, :current_user
-
-  private
 
   def current_user_session
     return @current_user_session if defined?(@current_user_session)

@@ -1,10 +1,13 @@
-<h1>New proposal for contest <%= @contest.name %></h1>
-
-<%= form_for @proposal, :html => { :multipart => true } do |f| %>
+<ul class="breadcrumb well well-small">
+  <li><a href="/">Contests</a> <span class="divider">/</span></li>
+  <li><a href="/contests/<%= @contest.id %>"><%= @contest.name %> </a> <span class="divider">/</span></li>
+  <li class="active">New proposal</li>
+</ul>
+<legend>New proposal</legend>
+<%= form_for @proposal, :url => { :action => 'create' }, :html => { :multipart => true } do |f| %>
   <% if @proposal.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@proposal.errors.count, "error") %> prohibited this proposal from being saved:</h2>
-
+    <div class="alert alert-error">
+      <strong><%= pluralize(@proposal.errors.count, "error") %> prohibited this proposal from being saved:</strong>
       <ul>
         <% @proposal.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -12,18 +15,23 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.file_field :image %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <d1 class="dl-horizontal">
+    <% if @proposal.errors.include? :description %>
+      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
+    <% else %>
+      <dt>
+    <% end %>
+    <%= Proposal.human_attribute_name :description %></dt>
+    <dd><%= f.text_area :description, :size => "60x4" %></dd>
+
+    <% if @proposal.errors.include? :image %>
+      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
+    <% else %>
+      <dt>
+    <% end %>
+    <%= Proposal.human_attribute_name :image %></dt>
+    <dd><%= f.file_field :image %></dd>
+
+    <dd><%= f.submit :class => "btn btn-primary" %></dd>
+  </d1>
 <% end %>
-
-<%= link_to 'Back', proposals_path %>
-

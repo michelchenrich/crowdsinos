@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>CrowdSINOS</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title>CrowdSINOS</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="/">CrowdSINOS</a>
+        <ul class="nav">
+          <% unless current_user.nil? %>
+            <li><%= link_to "Edit user profile", :edit_user_profile %></li>
+            <li><%= link_to "Logout", :logout %></li>
+          <% else %>
+            <li><%= link_to "Register", :register %></li> 
+            <li><%= link_to "Login", :login %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <% if notice %>
+        <p id="notice" class="alert alert-success"><%= notice %></p>
+      <% elsif alert %>
+        <p id="alert" class="alert"><%= alert %></p>
+      <% end %>
+      <%= yield %>
+      <script>
+        $(document).on("focus", "[data-behaviour~='datepicker']", function(e){
+          $(this).datepicker({"format": "dd/mm/yyyy", "weekStart": 1, "autoclose": true});
+        });
+      </script>
+    </div>
+  </body>
 </html>

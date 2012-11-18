@@ -1,35 +1,63 @@
-<h1>Listing contests</h1>
-
-<table>
-  <tr>
-    <th><%= Contest.human_attribute_name :name %></th>
-    <th><%= Contest.human_attribute_name :description %></th>
-    <th><%= Contest.human_attribute_name :start %></th>
-    <th><%= Contest.human_attribute_name :end %></th>
-    <th><%= Contest.human_attribute_name :winner %></th>
-    <th><%= Contest.human_attribute_name :contractor %></th>
-    <th><%= Contest.human_attribute_name :prize %></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @contests.each do |contest| %>
-  <tr>
-    <td><%= contest.name %></td>
-    <td><%= contest.description %></td>
-    <td><%= contest.start %></td>
-    <td><%= contest.end %></td>
-    <td><%= contest.winner.username unless contest.winner.nil? %></td>
-    <td><%= contest.contractor.username %></td>
-    <td><%= contest.prize %></td>
-    <td><%= link_to 'Show', contest %></td>
-    <td><%= link_to 'Edit', edit_contest_path(contest) %></td>
-    <td><%= link_to 'Destroy', contest, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
-  </tr>
+<% if current_user.nil? %>
+  <div class="alert alert-error">
+    <strong>You are not logged in. Please</strong>
+    <%= link_to "log in", :login %>
+    <strong>or</strong>
+    <%= link_to "register", :register %>
+    <strong> in order to proceed.</strong>
+  </div>
 <% end %>
+<ul class="breadcrumb well well-small">
+  <li class="active">Contests</li>
+</ul>
+<legend>Contests</legend>
+<table class="table table-hover table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th><%= Contest.human_attribute_name :status %></th>
+      <th><%= Contest.human_attribute_name :name %></th>
+      <th><%= Contest.human_attribute_name :start %></th>
+      <th><%= Contest.human_attribute_name :end %></th>
+      <th><%= Contest.human_attribute_name :prize %></th>
+      <th><%= Contest.human_attribute_name :winner %></th>
+      <% if current_user.instance_of? Contractor %>
+        <th>Actions</th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contests.each do |contest| %>
+      <tr class="<%= ContestsHelper::status_class(contest) %>">
+        <td><%= ContestsHelper::status(contest) %></td>
+        <td><%= link_to contest.name, contest %></td>
+        <td><%= ApplicationHelper::format_date contest.start %></td>
+        <td><%= ApplicationHelper::format_date contest.end %></td>
+        <td><%= ApplicationHelper::to_money contest.prize %></td>
+        <td><a href="#<%= "contest_#{contest.id}_winner" %>" role="button" class="btn btn-primary" data-toggle="modal" <%= contest.winning_proposal.nil? ? "disabled=""true""" : "" %>>Winner</a></td>
+        <% if current_user.instance_of? Contractor %>
+          <td>
+            <%= link_to 'Edit', edit_contest_path(contest) %> |
+            <%= link_to 'Delete', contest, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+
+      <% unless contest.winning_proposal.nil? %>
+      <div id="<%= "contest_#{contest.id}_winner" %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="<%= "contest_#{contest.id}_winner" %>Label" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="<%= "contest_#{contest.id}_winner" %>Label"><%= "Winning proposal of contest #{contest.name}" %></h3>
+        </div>
+        <div class="modal-body">
+          <%= render :partial => 'proposals/show', :locals => { :proposal => contest.winning_proposal } %>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+    <% end  %>
+  <% end %>
+</tbody>
 </table>
-
-<br />
-
-<%= link_to 'New Contest', new_contest_path %>
+<% if current_user.instance_of? Contractor %>
+  <%= link_to 'New contest', new_contest_path %>
+<% end %>

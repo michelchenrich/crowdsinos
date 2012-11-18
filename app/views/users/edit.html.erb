@@ -1,6 +1,2 @@
-<h1>Editing user</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<legend>Edit user profile</legend>
+<%= render :partial => 'form', :locals => { :new => false } %>

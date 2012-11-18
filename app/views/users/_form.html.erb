@@ -1,8 +1,7 @@
-<%= form_for(@user) do |f| %>
+<%= form_for @user, :url => new ? 'register' : 'edit_user_profile' do |f| %>
   <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
+    <div class="alert alert-error">
+      <strong><%= pluralize(@user.errors.count, "error") %> prohibited the profile data from being saved:</strong>
       <ul>
         <% @user.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -11,27 +10,51 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br />
-    <%= f.select :type, User.select_options %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <d1 class="dl-horizontal">
+    <% if new %>
+      <% if @user.errors.include? :username %>
+        <dt class="text text-error"><i class="icon-exclamation-sign"></i>
+      <% else %>
+        <dt>
+      <% end %>
+      <%= Contest.human_attribute_name :username %></dt>
+      <dd><%= f.text_field :username %></dd>
+    <% end %>
+
+    <% if @user.errors.include? :email %>
+      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
+    <% else %>
+      <dt>
+    <% end %>
+    <%= Contest.human_attribute_name :email %></dt>
+    <dd><%= f.text_field :email %></dd>
+
+    <% if @user.errors.include? :password %>
+      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
+    <% else %>
+      <dt>
+    <% end %>
+    <%= Contest.human_attribute_name :password %></dt>
+    <dd><%= f.password_field :password %></dd>
+
+    <% if @user.errors.include? :password_confirmation %>
+      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
+    <% else %>
+      <dt>
+    <% end %>
+    <%= Contest.human_attribute_name :password_confirmation %></dt>
+    <dd><%= f.password_field :password_confirmation %></dd>
+
+    <% if new %>
+      <% if @user.errors.include? :type %>
+        <dt class="text text-error"><i class="icon-exclamation-sign"></i>
+      <% else %>
+        <dt>
+      <% end %>
+      <%= Contest.human_attribute_name :type %></dt>
+      <dd><%= f.select :type, User.select_options %></dd>
+    <% end %>
+
+    <dd><%= f.submit new ? 'Register' : 'Update profile', :class => "btn btn-primary" %></dd>
+  </d1>
 <% end %>

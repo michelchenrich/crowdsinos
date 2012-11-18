@@ -1,39 +1,45 @@
-<p id="notice"><%= notice %></p>
+<ul class="breadcrumb well well-small">
+  <li><a href="/">Contests</a> <span class="divider">/</span></li>
+  <li class="active"><%= @contest.name %></li>
+</ul>
+<legend><%= @contest.name %></legend>
+<div class="well well-small">
+  <d1 class="dl-horizontal">
+    <dt><%= Contest.human_attribute_name :description %></dt>
+    <dd><%= @contest.description %></dd>
 
-<p>
-  <b><%= Contest.human_attribute_name :name %>:</b>
-  <%= @contest.name %>
-</p>
+    <dt><%= Contest.human_attribute_name :status %></dt>
+    <dd class="text-<%= ContestsHelper::status_class(@contest) %>"><%= ContestsHelper::status(@contest) %></dd>
 
-<p>
-  <b><%= Contest.human_attribute_name :description %>:</b>
-  <%= @contest.description %>
-</p>
+    <dt><%= Contest.human_attribute_name :start %></dt>
+    <dd><%= ApplicationHelper::format_date @contest.start %></dd>
 
-<p>
-  <b><%= Contest.human_attribute_name :start %>:</b>
-  <%= @contest.start %>
-</p>
+    <dt><%= Contest.human_attribute_name :end %></dt>
+    <dd><%= ApplicationHelper::format_date @contest.end %></dd>
 
-<p>
-  <b><%= Contest.human_attribute_name :end %>:</b>
-  <%= @contest.end %>
-</p>
+    <dt><%= Contest.human_attribute_name :contractor %></dt>
+    <dd><%= @contest.contractor.username %></dd>
 
-<p>
-  <b<%= Contest.human_attribute_name :winner %>:</b>
-  <%= @contest.winner.username unless @contest.winner.nil? %>
-</p>
-
-<p>
-  <b><%= Contest.human_attribute_name :contractor %>:</b>
-  <%= @contest.contractor.username %>
-</p>
-
-<p>
-  <b><%= Contest.human_attribute_name :prize %>:</b>
-  <%= @contest.prize %>
-</p>
-
-<%= link_to 'Edit', edit_contest_path(@contest) %> |
-<%= link_to 'Back', contests_path %>
+    <dt><%= Contest.human_attribute_name :prize %></dt>
+    <dd><%= ApplicationHelper::to_money @contest.prize %></dd>
+    <% if current_user.instance_of? Contractor and @contest.contractor == current_user %>
+      <dd><%= button_to 'Edit', edit_contest_path(@contest), :method => :get, :class => "btn btn-primary" %></dd>
+    <% end %>
+  </d1>
+</div>
+<% unless @contest.winning_proposal.nil? %>
+  <legend><%= Contest.human_attribute_name :winning_proposal %></legend>
+  <div class="well well-small">
+    <%= render :partial => 'proposals/show', :locals => { :proposal => @contest.winning_proposal } %>
+  </div>
+<% end %>
+<legend><%= Contest.human_attribute_name :proposals %></legend>
+<% if @contest.is_open? and current_user.instance_of? Designer %>
+  <%= button_to 'New proposal', new_contest_proposal_path(@contest), :method => :get, :class => "btn btn-primary" %>
+<% end %>
+<% @contest.proposals.each do |proposal| %>
+  <% next if proposal == @contest.winning_proposal %>
+  <div class="well well-small">
+    <%= render :partial => 'proposals/show', :locals => { :proposal => proposal } %>
+  </div>
+<% end %>

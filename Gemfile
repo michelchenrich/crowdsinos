@@ -7,6 +7,10 @@ gem 'rails', '3.2.8'
 
 gem 'activerecord-jdbcsqlite3-adapter'
 
+gem 'bootstrap-datepicker-rails'
+
+gem 'less-rails-bootstrap'
+
 gem 'jruby-openssl'
 
 # Gems used only for assets and not required

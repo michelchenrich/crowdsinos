@@ -21,16 +21,10 @@ class ContestsController < ApplicationController
         1
       end
     end
-    
+
     respond_to do |format|
-      format.html {
-        if current_user.instance_of? Contractor
-          render 'contractor_contests/index' and return
-        elsif current_user.instance_of? Designer
-          render 'designer_contests/index' and return
-        end
-      }
-      format.json { render :json => @contest }
+      format.html # index.html.erb
+      format.json { render :json => @contests }
     end
   end
 
@@ -40,13 +34,7 @@ class ContestsController < ApplicationController
     @contest = Contest.find(params[:id])
 
     respond_to do |format|
-      format.html {
-        if current_user.instance_of? Contractor
-          render 'contractor_contests/show' and return
-        elsif current_user.instance_of? Designer
-          render 'designer_contests/show' and return
-        end
-      }
+      format.html # show.html.erb
       format.json { render :json => @contest }
     end
   end
@@ -59,9 +47,9 @@ class ContestsController < ApplicationController
     respond_to do |format|
       format.html {
         if current_user.instance_of? Contractor
-          render 'contractor_contests/new' and return
+          format.html
         elsif current_user.instance_of? Designer
-          render 'designer_contests/new' and return
+          self.unauthorized
         end
       }
       format.json { render :json => @contest }
@@ -75,12 +63,12 @@ class ContestsController < ApplicationController
     respond_to do |format|
       format.html {
         if current_user.instance_of? Contractor
-          render 'contractor_contests/edit' and return
+          format.html
         elsif current_user.instance_of? Designer
-          self.not_found
+          self.unauthorized
         end
       }
-      format.json { render :json => @contest }
+      format.json { head :no_content }
     end
   end
 
@@ -89,19 +77,13 @@ class ContestsController < ApplicationController
   def create
     @contest = Contest.new(params[:contest])
     @contest.contractor_id = current_user.id
-
+   
     respond_to do |format|
       if @contest.save
         format.html { redirect_to @contest, :notice => 'Contest was successfully created.' }
         format.json { render :json => @contest, :status => :created, :location => @contest }
       else
-        format.html { 
-          if current_user.instance_of? Contractor
-            render 'contractor_contests/new' and return
-          elsif current_user.instance_of? Designer
-            self.not_found
-          end 
-        }
+        format.html { render :action => "new" }
         format.json { render :json => @contest.errors, :status => :unprocessable_entity }
       end
     end
@@ -117,13 +99,7 @@ class ContestsController < ApplicationController
         format.html { redirect_to @contest, :notice => 'Contest was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { 
-          if current_user.instance_of? Contractor
-            render 'contractor_contests/edit' and return
-          elsif current_user.instance_of? Designer
-            self.not_found
-          end
-        }
+        format.html { render :action => "edit" }
         format.json { render :json => @contest.errors, :status => :unprocessable_entity }
       end
     end
@@ -136,7 +112,18 @@ class ContestsController < ApplicationController
     @contest.destroy
 
     respond_to do |format|
-      format.html { redirect_to contests_url }
+      format.html { redirect_to contests_url, :notice => 'Contest was successfully deleted.' }
+      format.json { head :no_content }
+    end
+  end
+  
+  def set_winner
+    @contest = Contest.find(params[:contest_id])
+    @contest.winning_proposal = Proposal.find(params[:proposal_id])
+    @contest.save
+
+    respond_to do |format|
+      format.html { redirect_to :action => "index", :notice => 'Proposal was successfully set as winner.' }
       format.json { head :no_content }
     end
   end

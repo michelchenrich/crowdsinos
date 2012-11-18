@@ -1,15 +1,19 @@
-CrowdSINOS::Application.routes.draw do 
-  resources :contests
-  resources :users
-  resources :user_sessions
+CrowdSINOS::Application.routes.draw do   
+  resources :contests do
+    resources :proposals
+  end
   
-  match 'proposals/:contest_id', :controller => 'proposals', :action => 'index', :as => :proposals
-  match 'proposals/:contest_id/new', :controller => 'proposals', :action => 'new', :as => :new_proposal
-  match 'proposals/:contest_id/:proposal_id', :controller => 'proposals', :action => 'show', :as => :proposal
-  match 'proposals/:contest_id/create', :controller => 'proposals', :action => 'create'
+  put '/contest/:contest_id/set_winner/:proposal_id' => 'contests#set_winner', :as => 'set_winner'
   
-  match 'login' => 'user_sessions#new', :as => :login
-  match 'logout' => 'user_sessions#destroy', :as => :logout
+  post '/register'            => 'users#create',  :as => :register
+  get  '/register'            => 'users#new',     :as => :register
+  get  '/delete_user_profile' => 'users#destroy', :as => :delete_user_profile
+  get  '/edit_user_profile'   => 'users#edit',    :as => :edit_user_profile
+  put  '/edit_user_profile'   => 'users#update',  :as => :edit_user_profile
+  
+  post '/login'  => 'user_sessions#create',  :as => :login
+  get  '/login'  => 'user_sessions#new',     :as => :login
+  get  '/logout' => 'user_sessions#destroy', :as => :logout
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -60,7 +64,7 @@ CrowdSINOS::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "home#index"
+   root :to => "contests#index"
 
   # See how all your routes lay out with "rake routes"
 
