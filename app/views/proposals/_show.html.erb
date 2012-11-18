@@ -12,11 +12,11 @@
 
   <% if proposal.contest.is_open? %>
     <% if proposal.designer == current_user %>
-      <dd><%= button_to 'Delete', contest_proposal_path(proposal.contest, proposal), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary"%></dd>
+      <dd><%= button_to 'Delete', contest_proposal_path(proposal.contest, proposal), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger"%></dd>
     <% end %> 
 
     <% if proposal.contest.contractor == current_user %>
-      <dd><%= button_to 'Set as winner',  set_winner_path(proposal.contest, proposal) , :method => :put, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary" %></dd>
+      <dd><%= button_to 'Set as winner',  set_winner_path(proposal.contest, proposal) , :method => :put, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-warning" %></dd>
     <% end %>
   <% end %> 
   <br>

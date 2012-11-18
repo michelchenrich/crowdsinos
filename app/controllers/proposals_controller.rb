@@ -1,33 +1,4 @@
 class ProposalsController < ApplicationController
-  def index
-    @contest = Contest.find(params[:contest_id])
-    
-    respond_to do |format|
-      format.html{ redirect_to @contest }
-      format.json { render :json => @users }
-    end
-  end
-
-  def edit
-    self.not_found
-  end
-
-  def show
-    @contest = Contest.find(params[:contest_id])
-    @proposal = Proposal.find(params[:proposal_id])
-
-    respond_to do |format|
-      format.html{
-        if @contest.nil? or @proposal.nil?
-          self.not_found
-        else
-          render and return
-        end
-      }
-      format.json { render :json => @users }
-    end
-  end
-  
   def create
     @contest = Contest.find(params[:contest_id])
     @proposal = Proposal.new(params[:proposal])

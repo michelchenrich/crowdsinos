@@ -1,3 +1,3 @@
 class Contractor < User
-  has_many :contests
+  has_many :contests, :dependent => :destroy
 end

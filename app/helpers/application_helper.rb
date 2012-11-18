@@ -26,7 +26,7 @@ module ApplicationHelper
     # %Y - Year with century
     # %Z - Time zone name
     # %% - Literal ''%'' character
-    date.strftime "%d/%m/%Y"
+    date.strftime "%d/%m/%Y" rescue ""
   end
   
   def self.to_money number

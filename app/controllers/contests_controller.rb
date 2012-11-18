@@ -120,10 +120,10 @@ class ContestsController < ApplicationController
   def set_winner
     @contest = Contest.find(params[:contest_id])
     @contest.winning_proposal = Proposal.find(params[:proposal_id])
-    @contest.save
+    @contest.save!
 
     respond_to do |format|
-      format.html { redirect_to :action => "index", :notice => 'Proposal was successfully set as winner.' }
+      format.html { redirect_to root_url, :notice => 'Proposal was successfully set as winner.' }
       format.json { head :no_content }
     end
   end

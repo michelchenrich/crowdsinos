@@ -1,9 +1,9 @@
-CrowdSINOS::Application.routes.draw do   
+CrowdSINOS::Application.routes.draw do
   resources :contests do
-    resources :proposals
+    resources :proposals, :only => [:create, :new, :destroy]
   end
-  
-  put '/contest/:contest_id/set_winner/:proposal_id' => 'contests#set_winner', :as => 'set_winner'
+  root :to => "contests#index"
+  put    '/contests/:contest_id/set_winner/:proposal_id' => 'contests#set_winner', :as => :set_winner
   
   post   '/register'            => 'users#create',  :as => :register
   get    '/register'            => 'users#new',     :as => :register
@@ -64,7 +64,6 @@ CrowdSINOS::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "contests#index"
 
   # See how all your routes lay out with "rake routes"
 
