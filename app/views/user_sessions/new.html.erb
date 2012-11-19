@@ -1,31 +1,16 @@
 <legend>Login</legend>
-<%= form_for @user_session, :url => :login do |f| %>
-  <% if @user_session.errors.any? %>
-    <div class="alert alert-error">
-      <ul>
-        <% @user_session.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+<%= form_for(@user_session, :html => { :class => "form-horizontal" }, :url => :login) do |form| %>
+  <%= form_errors_block @user_session %>
+
+  <%= form_input(form, @user_session, :username) do %>
+    <%= form.text_field :username %>
   <% end %>
-  <d1 class="dl-horizontal">
-    <% if @user_session.errors.include? :username %>
-      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
-    <% else %>
-      <dt>
-    <% end %>
-    <%= Contest.human_attribute_name :username %></dt>
-    <dd><%= f.text_field :username %></dd>
 
-    <% if @user_session.errors.include? :password %>
-      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
-    <% else %>
-      <dt>
-    <% end %>
-    <%= Contest.human_attribute_name :password %></dt>
-    <dd><%= f.password_field :password %></dd>
+  <%= form_input(form, @user_session, :password) do %>
+    <%= form.password_field :password %>
+  <% end %>
 
-    <dd><%= f.submit 'Login', :class => "btn btn-primary" %></dd>
-  </d1>
+  <%= form_submit form do %>
+    <%= form.submit 'Login', :class => "btn btn-primary" %>
+  <% end %>
 <% end %>

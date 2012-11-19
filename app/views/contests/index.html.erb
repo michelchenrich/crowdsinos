@@ -1,5 +1,6 @@
 <% if current_user.nil? %>
   <div class="alert alert-error">
+    <i class="icon-exclamation-sign"></i>
     <strong>You are not logged in. Please</strong>
     <%= link_to "log in", :login %>
     <strong>or</strong>
@@ -27,17 +28,24 @@
   </thead>
   <tbody>
     <% @contests.each do |contest| %>
-      <tr class="<%= ContestsHelper::status_class(contest) %>">
-        <td><%= ContestsHelper::status(contest) %></td>
+      <tr class="<%= status_class(contest) %>">
+        <td><%= status(contest) %></td>
         <td><%= link_to contest.name, contest %></td>
-        <td><%= ApplicationHelper::format_date contest.start %></td>
-        <td><%= ApplicationHelper::format_date contest.end %></td>
-        <td><%= ApplicationHelper::to_money contest.prize %></td>
+        <td><%= format_date contest.start %></td>
+        <td><%= format_date contest.end %></td>
+        <td><%= to_money contest.prize %></td>
         <td><a href="#<%= "contest_#{contest.id}_winner" %>" role="button" class="btn btn-primary" data-toggle="modal" <%= contest.winning_proposal.nil? ? "disabled=""true""" : "" %>>Winner</a></td>
-        <% if current_user.instance_of? Contractor %>
+        <% if current_user.instance_of? Contractor and contest.contractor == current_user  %>
           <td>
-            <%= link_to 'Edit', edit_contest_path(contest) %> |
-            <%= link_to 'Delete', contest, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+            <div class="btn-group">
+              <%= link_to edit_contest_path(contest), :class => "btn btn-primary", :title => "Edit Contest" do %>
+                <i class="icon-pencil icon-white"></i>
+              <% end %>
+              <%= link_to contest, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary", :title => "Delete Contest" do %>
+                <i class="icon-trash icon-white"></i>
+              <% end %>
+            </div>
+          </td>
         <% end %>
       </tr>
 
@@ -59,5 +67,7 @@
 </tbody>
 </table>
 <% if current_user.instance_of? Contractor %>
-  <%= link_to 'New contest', new_contest_path %>
+  <%= link_to new_contest_path, :class => "btn btn-primary pull-right", :title => "Create Contest" do %>
+    <i class="icon-plus icon-white"></i>
+  <% end %>
 <% end %>

@@ -8,7 +8,9 @@ class Contest < ActiveRecord::Base
   
   class ContestEndValidator < ActiveModel::EachValidator
     def validate_each(record, attribute, value)
-      record.errors.add attribute, 'must be greater than the start date' if value.nil? or value <= record.start
+      unless record.start.nil?
+        record.errors.add attribute, 'must be greater than the start date' if value.nil? or value <= record.start
+      end
     end
   end
   
@@ -27,7 +29,7 @@ class Contest < ActiveRecord::Base
   end
   
   validates :name,        :presence => true, :uniqueness => true 
-  validates :description, :presence => true, :length => { :minimum => 10 }
+  validates :description, :length => { :minimum => 10 }
   validates :contractor,  :presence => true 
   validates :start,       :presence => true 
   validates :end,         :contest_end => true

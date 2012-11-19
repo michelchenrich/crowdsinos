@@ -4,9 +4,10 @@
   <li class="active">New proposal</li>
 </ul>
 <legend>New proposal</legend>
-<%= form_for @proposal, :url => { :action => 'create' }, :html => { :multipart => true } do |f| %>
+<%= form_for @proposal, :url => { :action => 'create' }, :html => { :multipart => true, :class => "form-horizontal" } do |f| %>
   <% if @proposal.errors.any? %>
     <div class="alert alert-error">
+      <i class="icon-exclamation-sign"></i>
       <strong><%= pluralize(@proposal.errors.count, "error") %> prohibited this proposal from being saved:</strong>
       <ul>
         <% @proposal.errors.full_messages.each do |msg| %>
@@ -15,23 +16,26 @@
       </ul>
     </div>
   <% end %>
-  <d1 class="dl-horizontal">
-    <% if @proposal.errors.include? :description %>
-      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
-    <% else %>
-      <dt>
-    <% end %>
-    <%= Proposal.human_attribute_name :description %></dt>
-    <dd><%= f.text_area :description, :size => "60x4" %></dd>
 
-    <% if @proposal.errors.include? :image %>
-      <dt class="text text-error"><i class="icon-exclamation-sign"></i>
-    <% else %>
-      <dt>
-    <% end %>
-    <%= Proposal.human_attribute_name :image %></dt>
-    <dd><%= f.file_field :image %></dd>
+  <div class="control-group <%= @proposal.errors.include?(:description) ? "error" : "" %>">
+    <label class="control-label" for="proposal_description"><%= Contest.human_attribute_name :description %></label>
+    <div class="controls">
+      <%= f.text_area :description, :size => "60x4" %>
+      <%= ApplicationHelper::error_help @proposal, :description %>
+    </div>
+  </div>
 
-    <dd><%= f.submit :class => "btn btn-primary" %></dd>
-  </d1>
+  <div class="control-group <%= @proposal.errors.include?(:image) ? "error" : "" %>">
+    <label class="control-label" for="proposal_description"><%= Contest.human_attribute_name :image %></label>
+    <div class="controls">
+        <%= f.file_field :image %>
+      <%= ApplicationHelper::error_help @proposal, :image %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>  
 <% end %>

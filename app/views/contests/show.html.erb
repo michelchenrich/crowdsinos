@@ -9,21 +9,36 @@
     <dd><%= @contest.description %></dd>
 
     <dt><%= Contest.human_attribute_name :status %></dt>
-    <dd class="text-<%= ContestsHelper::status_class(@contest) %>"><%= ContestsHelper::status(@contest) %></dd>
+    <dd class="text-<%= status_class(@contest) %>"><%= status(@contest) %></dd>
 
     <dt><%= Contest.human_attribute_name :start %></dt>
-    <dd><%= ApplicationHelper::format_date @contest.start %></dd>
+    <dd><%= format_date @contest.start %></dd>
 
     <dt><%= Contest.human_attribute_name :end %></dt>
-    <dd><%= ApplicationHelper::format_date @contest.end %></dd>
+    <dd><%= format_date @contest.end %></dd>
 
     <dt><%= Contest.human_attribute_name :contractor %></dt>
     <dd><%= @contest.contractor.username %></dd>
 
     <dt><%= Contest.human_attribute_name :prize %></dt>
-    <dd><%= ApplicationHelper::to_money @contest.prize %></dd>
+    <dd><%= to_money @contest.prize %></dd>
+
+    <% unless @contest.winner.nil? %>
+      <dt><%= Contest.human_attribute_name :winner %></dt>
+      <dd><%= @contest.winner.username %></dd>
+    <% end %>
+      
     <% if current_user.instance_of? Contractor and @contest.contractor == current_user %>
-      <dd><%= button_to 'Edit', edit_contest_path(@contest), :method => :get, :class => "btn btn-primary" %></dd>
+      <dd>
+        <div class="btn-group">
+          <%= link_to edit_contest_path(@contest), :class => "btn btn-primary", :title => "Edit Contest" do %>
+            <i class="icon-pencil icon-white"></i>
+          <% end %>
+          <%= link_to @contest, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-primary", :title => "Delete Contest" do %>
+            <i class="icon-trash icon-white"></i>
+          <% end %>
+        </div>
+      </dd>
     <% end %>
   </d1>
 </div>
@@ -35,7 +50,9 @@
 <% end %>
 <legend><%= Contest.human_attribute_name :proposals %></legend>
 <% if @contest.is_open? and current_user.instance_of? Designer %>
-  <%= button_to 'New proposal', new_contest_proposal_path(@contest), :method => :get, :class => "btn btn-primary" %>
+  <%= link_to new_contest_proposal_path(@contest), :class => "btn btn-primary", :title => "Create Proposal" do %>
+    <i class="icon-plus icon-white"></i>
+  <% end %>
 <% end %>
 <% @contest.proposals.each do |proposal| %>
   <% next if proposal == @contest.winning_proposal %>

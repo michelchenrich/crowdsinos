@@ -1,5 +1,7 @@
+include ActionView::Helpers::TextHelper
+include ActionView::Context
 module ApplicationHelper
-  def self.format_date date
+  def format_date date
     # %a - The abbreviated weekday name (''Sun'')
     # %A - The  full  weekday  name (''Sunday'')
     # %b - The abbreviated month name (''Jan'')
@@ -29,7 +31,47 @@ module ApplicationHelper
     date.strftime "%d/%m/%Y" rescue ""
   end
   
-  def self.to_money number
+  def to_money number
     number_to_currency number, :unit => 'R$', :delimiter => '.', :separator => ','
+  end
+  
+  def form_input form, model, field, &block
+    content_tag(:div, :class => "control-group#{ model.errors.include?(field) ? " error" : ""}") {
+      concat form.label(field, :class => "control-label")
+      concat content_tag(:div, :class => "controls") {
+        concat capture(&block)
+        concat field_error_help(model, field)
+      }
+    }
+  end
+  
+  def form_submit form, &block
+    content_tag(:div, :class => "control-group") {
+      concat content_tag(:div, :class => "controls") {
+        concat block_given? ? capture(&block) : form.submit(:class => "btn btn-primary")
+      }
+    }
+  end
+  
+  def form_errors_block model
+    if model.errors.any?
+      content_tag(:div, :class => "alert alert-error") {
+        concat content_tag(:i, :class => "icon-exclamation-sign") { }
+        concat content_tag(:strong) { " Please correct the following #{ model.errors.count > 1 ? "errors" : "error" } in order to proceed:".html_safe }
+        concat content_tag(:ul) {
+          model.errors.full_messages.each do |message|
+            concat content_tag(:li) { "#{message}".html_safe }      
+          end     
+        }
+      }
+    end
+  end
+  
+  def field_error_help model, field
+    if model.errors.include? field
+      content_tag(:span, :class => "help-inline") {
+        "#{model.class.human_attribute_name field} #{model.errors[field].to_sentence(:last_word_connector => ' and ')}".html_safe
+      }
+    end
   end
 end

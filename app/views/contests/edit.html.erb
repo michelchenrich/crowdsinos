@@ -1,6 +1,6 @@
 <ul class="breadcrumb well well-small">
   <li><a href="/">Contests</a> <span class="divider">/</span></li>
-  <li class="active">Edit <%= @contest.name %></li>
+  <li class="active">Edit Contest: <%= @contest.name %></li>
 </ul>
-<legend>Edit <%= @contest.name %></legend>
+<legend>Edit Contest: <%= @contest.name %></legend>
 <%= render :partial => 'form', :locals => { :new => false } %>

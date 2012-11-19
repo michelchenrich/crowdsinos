@@ -12,12 +12,50 @@
 
   <% if proposal.contest.is_open? %>
     <% if proposal.designer == current_user %>
-      <dd><%= button_to 'Delete', contest_proposal_path(proposal.contest, proposal), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger"%></dd>
+      <dd>
+        <%= link_to contest_proposal_path(proposal.contest, proposal), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger", :title => "Delete Proposal" do %>
+          <i class="icon-trash icon-white"></i>
+        <% end %>
+      </dd>
     <% end %> 
 
     <% if proposal.contest.contractor == current_user %>
-      <dd><%= button_to 'Set as winner',  set_winner_path(proposal.contest, proposal) , :method => :put, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-warning" %></dd>
+      <dd>
+        <a href="#<%= "pay_#{proposal.id}_designer" %>" role="button" class="btn btn-warning" data-toggle="modal">
+          <i class="icon-ok icon-white"></i> Set as winner
+        </a>
+      </dd>
     <% end %>
-  <% end %> 
+  <% end %>   
   <br>
 </d1>
+
+<% if proposal.contest.is_open? and proposal.contest.contractor == current_user %>
+  <div id="<%= "pay_#{proposal.id}_designer" %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="<%= "pay_#{proposal.id}_designer" %>Label" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="<%= "pay_#{proposal.id}_designer" %>Label"><%= "Pay contest winner" %></h3>
+    </div>
+    <div class="modal-body">
+      In order to accept this proposal as the contest winner, 
+      please pay the contest prize to <strong><%= proposal.designer.username %></strong>, 
+      then click <code>Accept</code>.<br/><br/>
+      The contest's prize is <strong><%= ApplicationHelper::to_money proposal.contest.prize %></strong><br/>
+      <strong><%= proposal.designer.username %></strong>'s e-mail address is <strong><%=  proposal.designer.email %></strong><br/>
+      Please click on the following
+      <a href="https://www.paypal.com/webapps/mpp/send-money-online" target="_blank">link</a>
+      to proceed to payment.
+    </div>
+    <div class="modal-footer">
+      <!--
+      <a href="<%#= set_winner_path(proposal.contest, proposal) %>" data-dismiss="modal" aria-hidden="true" data-method="put" class="btn btn-warning">
+        <i class="icon-ok icon-white"></i> Set as winner
+      </a>
+      -->
+      <%= link_to set_winner_path(proposal.contest, proposal), :method => :put, :class => "btn btn-warning" do %>
+        <i class="icon-ok icon-white"></i> Accept
+      <% end %>
+      <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    </div>
+  </div>
+<% end %>

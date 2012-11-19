@@ -7,25 +7,41 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="navbar">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-        <a class="brand" href="/"><%= current_user.nil? ? "CrowdSINOS" : current_user.username %></a>
-        <ul class="nav">
-          <% unless current_user.nil? %>
-            <li><%= link_to "Edit user profile", :edit_user_profile %></li>
-            <li><%= link_to "Logout", :logout %></li>
-          <% else %>
-            <li><%= link_to "Register", :register %></li> 
-            <li><%= link_to "Login", :login %></li>
-          <% end %>
-        </ul>
+        <div class="container">
+          <a class="brand" href="/"><%= current_user.nil? ? "CrowdSINOS" : current_user.username %></a>
+          <ul class="nav">
+            <% unless current_user.nil? %>
+              <li>
+                <%= link_to :edit_user_profile do%>
+                  <i class="icon-pencil"></i> Edit User Profile
+                <% end %>
+              </li>
+              <li>
+                <%= link_to :logout do %>
+                  <i class="icon-off"></i> Logout
+                <% end %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to :register do%>
+                  <i class="icon-asterisk"></i> Register
+                <% end %>
+              </li> 
+              <li>
+                <%= link_to :login do%>
+                  <i class="icon-user"></i> Login
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="container">
       <% if notice %>
-        <p id="notice" class="alert alert-success"><%= notice %></p>
-      <% elsif alert %>
-        <p id="alert" class="alert"><%= alert %></p>
+        <p id="notice" class="alert alert-success"><i class="icon-ok-sign"></i> <%= notice %></p>
       <% end %>
       <%= yield %>
       <script>
