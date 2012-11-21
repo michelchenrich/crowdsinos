@@ -1,8 +1,10 @@
 <%= form_for(@contest, :html => { :class => "form-horizontal" }) do |form| %>
   <%= form_errors_block @contest %>
 
-  <%= form_input(form, @contest, :name) do %>
-    <%= form.text_field :name %>
+  <% if new %>
+    <%=  form_input(form, @contest, :name) do %>
+      <%= form.text_field :name %>
+    <% end %>
   <% end %>
 
   <%= form_input(form, @contest, :description) do %>

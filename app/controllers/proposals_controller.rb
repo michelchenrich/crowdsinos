@@ -21,7 +21,13 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html {
+        if current_user.instance_of? Designer
+          render
+        elsif current_user.instance_of? Contractor
+          self.unauthorized
+        end
+      }
       format.json { render :json => @proposal }
     end
   end

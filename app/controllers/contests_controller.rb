@@ -47,7 +47,7 @@ class ContestsController < ApplicationController
     respond_to do |format|
       format.html {
         if current_user.instance_of? Contractor
-          format.html
+          render
         elsif current_user.instance_of? Designer
           self.unauthorized
         end

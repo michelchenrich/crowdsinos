@@ -34,7 +34,18 @@
         <td><%= format_date contest.start %></td>
         <td><%= format_date contest.end %></td>
         <td><%= to_money contest.prize %></td>
-        <td><a href="#<%= "contest_#{contest.id}_winner" %>" role="button" class="btn btn-primary" data-toggle="modal" <%= contest.winning_proposal.nil? ? "disabled=""true""" : "" %>>Winner</a></td>
+        <td>
+          <a href="#<%= "contest_#{contest.id}_winner" %>" 
+             role="button" 
+             class="btn <%= contest.winning_proposal.nil? ? "btn-primary" : "btn-primary" %>" 
+             data-toggle="modal" 
+             rel="tooltip"
+             data-original-title="See winning proposal"
+             <%= contest.winning_proposal.nil? ? "disabled=""true""" : "" %>>
+            <i class="icon-zoom-in <%= contest.winning_proposal.nil? ? "icon-white" : "icon-white" %>"></i>
+            <%#= contest.winning_proposal.nil? ? "No winner" : contest.winning_proposal.designer.username %>
+          </a>
+        </td>
         <% if current_user.instance_of? Contractor and contest.contractor == current_user  %>
           <td>
             <div class="btn-group">
@@ -67,7 +78,9 @@
 </tbody>
 </table>
 <% if current_user.instance_of? Contractor %>
-  <%= link_to new_contest_path, :class => "btn btn-primary pull-right", :title => "Create Contest" do %>
-    <i class="icon-plus icon-white"></i>
-  <% end %>
+  <div class="btn-toolbar">
+    <%= link_to new_contest_path, :class => "btn btn-primary", :title => "Create Contest" do %>
+      <i class="icon-plus icon-white"></i>
+    <% end %>
+  </div>
 <% end %>

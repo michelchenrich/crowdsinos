@@ -41,7 +41,11 @@
     </div>
     <div class="container">
       <% if notice %>
-        <p id="notice" class="alert alert-success"><i class="icon-ok-sign"></i> <%= notice %></p>
+        <p id="notice" class="alert alert-success fade in">
+          <i class="icon-ok-sign"></i>
+          <%= notice %> 
+          <button class="close" data-dismiss="alert">×</button>
+        </p>
       <% end %>
       <%= yield %>
       <script>
