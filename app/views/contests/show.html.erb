@@ -1,4 +1,4 @@
-<ul class="breadcrumb well well-small">
+<ul class="breadcrumb">
   <li><a href="/">Contests</a> <span class="divider">/</span></li>
   <li class="active"><%= @contest.name %></li>
 </ul>
@@ -56,9 +56,13 @@
     <% end %>
   </div>
 <% end %>
-<% @contest.proposals.each do |proposal| %>
-  <% next if proposal == @contest.winning_proposal %>
-  <div class="well well-small">
-    <%= render :partial => 'proposals/show', :locals => { :proposal => proposal } %>
-  </div>
+<% if @contest.proposals.any? %>
+  <% @contest.proposals.each do |proposal| %>
+    <% next if proposal == @contest.winning_proposal %>
+    <div class="horizontal_separator">
+      <%= render :partial => 'proposals/show', :locals => { :proposal => proposal } %>
+    </div>
+  <% end %>
+<% else %>
+  <span class="muted">No proposals<%= @contest.is_open? ? " yet" : "" %>.</span>
 <% end %>

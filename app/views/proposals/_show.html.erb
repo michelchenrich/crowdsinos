@@ -9,26 +9,23 @@
 
   <dt><%= Proposal.human_attribute_name :created_at %></dt>
   <dd><%= time_ago_in_words proposal.created_at %> ago</dd>
-
-  <% if proposal.contest.is_open? %>
-    <% if proposal.designer == current_user %>
-      <dd>
-        <%= link_to contest_proposal_path(proposal.contest, proposal), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger", :title => "Delete Proposal" do %>
-          <i class="icon-trash icon-white"></i>
-        <% end %>
-      </dd>
-    <% end %> 
-
-    <% if proposal.contest.contractor == current_user %>
-      <dd>
-        <a href="#<%= "pay_#{proposal.id}_designer" %>" role="button" class="btn btn-warning" data-toggle="modal">
-          <i class="icon-ok icon-white"></i> Set as winner
-        </a>
-      </dd>
-    <% end %>
-  <% end %>   
-  <br>
 </d1>
+
+<% if proposal.contest.is_open? and 
+    proposal.designer == current_user or
+    proposal.contest.contractor == current_user %>
+  <div class='btn-toolbar'>
+    <% if proposal.designer == current_user %>
+      <%= link_to contest_proposal_path(proposal.contest, proposal), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger", :title => "Delete Proposal" do %>
+        <i class="icon-trash icon-white"></i>
+      <% end %>
+    <% else %> 
+      <a href="#<%= "pay_#{proposal.id}_designer" %>" role="button" class="btn btn-warning" data-toggle="modal">
+        <i class="icon-ok icon-white"></i> Set as winner
+      </a>
+    <% end %>
+  </div>
+<% end %>   
 
 <% if proposal.contest.is_open? and proposal.contest.contractor == current_user %>
   <div id="<%= "pay_#{proposal.id}_designer" %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="<%= "pay_#{proposal.id}_designer" %>Label" aria-hidden="true">

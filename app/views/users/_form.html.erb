@@ -19,10 +19,6 @@
     <%= form.password_field :password_confirmation %>
   <% end %>
 
-  <%= form_input(form, @user, :password_confirmation) do %>
-    <%= form.password_field :password_confirmation %>
-  <% end %>
-
   <% if new %>
     <%= form_input(form, @user, :type) do %>
       <%= form.select :type, User.select_options %>

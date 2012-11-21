@@ -8,18 +8,18 @@
     <strong> in order to proceed.</strong>
   </div>
 <% end %>
-<ul class="breadcrumb well well-small">
+<ul class="breadcrumb">
   <li class="active">Contests</li>
 </ul>
 <legend>Contests</legend>
-<table class="table table-hover table-bordered table-condensed">
+<table class="table table-striped table-hover">
   <thead>
     <tr>
       <th><%= Contest.human_attribute_name :status %></th>
-      <th><%= Contest.human_attribute_name :name %></th>
-      <th><%= Contest.human_attribute_name :start %></th>
-      <th><%= Contest.human_attribute_name :end %></th>
-      <th><%= Contest.human_attribute_name :prize %></th>
+      <th><%= Contest.human_attribute_name :name   %></th>
+      <th><%= Contest.human_attribute_name :start  %></th>
+      <th><%= Contest.human_attribute_name :end    %></th>
+      <th><%= Contest.human_attribute_name :prize  %></th>
       <th><%= Contest.human_attribute_name :winner %></th>
       <% if current_user.instance_of? Contractor %>
         <th>Actions</th>
@@ -28,8 +28,8 @@
   </thead>
   <tbody>
     <% @contests.each do |contest| %>
-      <tr class="<%= status_class(contest) %>">
-        <td><%= status(contest) %></td>
+      <tr>
+        <td class="text-<%= status_class(contest) %>"><%= status(contest) %></td>
         <td><%= link_to contest.name, contest %></td>
         <td><%= format_date contest.start %></td>
         <td><%= format_date contest.end %></td>
@@ -37,13 +37,12 @@
         <td>
           <a href="#<%= "contest_#{contest.id}_winner" %>" 
              role="button" 
-             class="btn <%= contest.winning_proposal.nil? ? "btn-primary" : "btn-primary" %>" 
+             class="btn <%= contest.winning_proposal.nil? ? "" : "btn-primary" %>" 
              data-toggle="modal" 
              rel="tooltip"
              data-original-title="See winning proposal"
              <%= contest.winning_proposal.nil? ? "disabled=""true""" : "" %>>
-            <i class="icon-zoom-in <%= contest.winning_proposal.nil? ? "icon-white" : "icon-white" %>"></i>
-            <%#= contest.winning_proposal.nil? ? "No winner" : contest.winning_proposal.designer.username %>
+            <i class="icon-zoom-in <%= contest.winning_proposal.nil? ? "" : "icon-white" %>"></i>
           </a>
         </td>
         <% if current_user.instance_of? Contractor and contest.contractor == current_user  %>
