@@ -40,18 +40,13 @@
       In order to accept this proposal as the contest winner, 
       please pay the contest prize to <strong><%= proposal.designer.username %></strong>, 
       then click <code>Accept</code>.<br/><br/>
-      The contest's prize is <strong><%= ApplicationHelper::to_money proposal.contest.prize %></strong><br/>
+      The contest's prize is <strong><%= to_money proposal.contest.prize %></strong><br/>
       <strong><%= proposal.designer.username %></strong>'s e-mail address is <strong><%=  proposal.designer.email %></strong><br/>
       Please click on the following
       <a href="https://www.paypal.com/webapps/mpp/send-money-online" target="_blank">link</a>
       to proceed to payment.
     </div>
     <div class="modal-footer">
-      <!--
-      <a href="<%#= set_winner_path(proposal.contest, proposal) %>" data-dismiss="modal" aria-hidden="true" data-method="put" class="btn btn-warning">
-        <i class="icon-ok icon-white"></i> Set as winner
-      </a>
-      -->
       <%= link_to set_winner_path(proposal.contest, proposal), :method => :put, :class => "btn btn-warning" do %>
         <i class="icon-ok icon-white"></i> Accept
       <% end %>

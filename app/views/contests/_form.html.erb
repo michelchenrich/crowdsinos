@@ -10,17 +10,11 @@
   <% end %>
 
   <%= form_input form, @contest, :start do %>
-    <div class="input-prepend input-append">
-      <span class="add-on"><i class="icon-calendar"></i></span>
-      <input id="contest_start" name="contest[start]" type="text" data-behaviour='datepicker' value="<%= format_date @contest.start %>">
-    </div>
+    <%= datepicker_field @contest, :start %>
   <% end %>
 
   <%= form_input form, @contest, :end do %>
-    <div class="input-prepend input-append">
-      <span class="add-on"><i class="icon-calendar"></i></span>
-      <input id="contest_start" name="contest[end]" type="text" data-behaviour='datepicker' value="<%= format_date @contest.end %>">
-    </div>
+    <%= datepicker_field @contest, :end %>
   <% end %>
 
   <%= form_input form, @contest, :prize do %>

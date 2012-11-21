@@ -74,4 +74,18 @@ module ApplicationHelper
       }
     end
   end
+  
+  def datepicker_field model, field
+    content_tag(:div, :class => "input-prepend input-append") {
+      concat content_tag(:span, :class => "add-on") {
+        concat content_tag(:i, :class => "icon-calendar") { }
+      }
+      concat content_tag(:input, 
+        :id              => "#{model.class.to_s.downcase}_#{field.to_s}", 
+        :name            => "#{model.class.to_s.downcase}[#{field.to_s}]",
+        :type            => "text",
+        'data-behaviour' => 'datepicker',
+        :value           => "#{ format_date model[field] }") { }
+    }
+  end
 end

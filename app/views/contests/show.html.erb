@@ -27,7 +27,7 @@
       <dt><%= Contest.human_attribute_name :winner %></dt>
       <dd><%= @contest.winner.username %></dd>
     <% end %>
-      
+
     <% if current_user.instance_of? Contractor and @contest.contractor == current_user %>
       <dd>
         <div class="btn-group">
@@ -50,9 +50,11 @@
 <% end %>
 <legend><%= Contest.human_attribute_name :proposals %></legend>
 <% if @contest.is_open? and current_user.instance_of? Designer %>
-  <%= link_to new_contest_proposal_path(@contest), :class => "btn btn-primary", :title => "Create Proposal" do %>
-    <i class="icon-plus icon-white"></i>
-  <% end %>
+  <div class="btn-toolbar">
+    <%= link_to new_contest_proposal_path(@contest), :class => "btn btn-primary", :title => "Create Proposal" do %>
+      <i class="icon-plus icon-white"></i>
+    <% end %>
+  </div>
 <% end %>
 <% @contest.proposals.each do |proposal| %>
   <% next if proposal == @contest.winning_proposal %>

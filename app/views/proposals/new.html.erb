@@ -4,38 +4,16 @@
   <li class="active">New proposal</li>
 </ul>
 <legend>New proposal</legend>
-<%= form_for @proposal, :url => { :action => 'create' }, :html => { :multipart => true, :class => "form-horizontal" } do |f| %>
-  <% if @proposal.errors.any? %>
-    <div class="alert alert-error">
-      <i class="icon-exclamation-sign"></i>
-      <strong><%= pluralize(@proposal.errors.count, "error") %> prohibited this proposal from being saved:</strong>
-      <ul>
-        <% @proposal.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+<%= form_for @proposal, :url => { :action => 'create' }, :html => { :multipart => true, :class => "form-horizontal" } do |form| %>
+  <%= form_errors_block @proposal %>
+
+  <%= form_input(form, @proposal, :description) do %>
+    <%= form.text_area :description, :size => "60x4" %>
   <% end %>
 
-  <div class="control-group <%= @proposal.errors.include?(:description) ? "error" : "" %>">
-    <label class="control-label" for="proposal_description"><%= Contest.human_attribute_name :description %></label>
-    <div class="controls">
-      <%= f.text_area :description, :size => "60x4" %>
-      <%= ApplicationHelper::error_help @proposal, :description %>
-    </div>
-  </div>
+  <%= form_input(form, @proposal, :image) do %>
+    <%= form.file_field :image %>
+  <% end %>
 
-  <div class="control-group <%= @proposal.errors.include?(:image) ? "error" : "" %>">
-    <label class="control-label" for="proposal_description"><%= Contest.human_attribute_name :image %></label>
-    <div class="controls">
-        <%= f.file_field :image %>
-      <%= ApplicationHelper::error_help @proposal, :image %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <div class="controls">
-      <%= f.submit :class => "btn btn-primary" %>
-    </div>
-  </div>  
+  <%= form_submit form %>
 <% end %>
