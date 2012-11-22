@@ -44,7 +44,7 @@
 </div>
 <% unless @contest.winning_proposal.nil? %>
   <legend><%= Contest.human_attribute_name :winning_proposal %></legend>
-  <div class="well well-small">
+  <div class="proposal">
     <%= render :partial => 'proposals/show', :locals => { :proposal => @contest.winning_proposal } %>
   </div>
 <% end %>
@@ -57,12 +57,14 @@
   </div>
 <% end %>
 <% if @contest.proposals.any? %>
-  <% @contest.proposals.each do |proposal| %>
-    <% next if proposal == @contest.winning_proposal %>
-    <div class="horizontal_separator">
-      <%= render :partial => 'proposals/show', :locals => { :proposal => proposal } %>
-    </div>
-  <% end %>
+  <div class="proposal_list">
+    <% @contest.proposals.each do |proposal| %>
+      <% next if proposal == @contest.winning_proposal %>
+      <div class="proposal">
+        <%= render :partial => 'proposals/show', :locals => { :proposal => proposal } %>
+      </div>
+    <% end %>
+  </div>
 <% else %>
   <span class="muted">No proposals<%= @contest.is_open? ? " yet" : "" %>.</span>
 <% end %>
