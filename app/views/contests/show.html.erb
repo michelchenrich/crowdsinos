@@ -48,7 +48,7 @@
     <%= render :partial => 'proposals/show', :locals => { :proposal => @contest.winning_proposal } %>
   </div>
 <% end %>
-<legend><%= Contest.human_attribute_name :proposals %></legend>
+<legend><%= Contest.human_attribute_name(@contest.has_winner? ? :other_proposals : :proposals) %></legend>
 <% if @contest.is_open? and current_user.instance_of? Designer %>
   <div class="btn-toolbar">
     <%= link_to new_contest_proposal_path(@contest), :class => "btn btn-primary", :title => "Create Proposal" do %>
@@ -58,8 +58,7 @@
 <% end %>
 <% if @contest.proposals.any? %>
   <div class="proposal_list">
-    <% @contest.proposals.each do |proposal| %>
-      <% next if proposal == @contest.winning_proposal %>
+    <% (@contest.has_winner? ? @contest.other_proposals : @contest.proposals).each do |proposal| %>
       <div class="proposal">
         <%= render :partial => 'proposals/show', :locals => { :proposal => proposal } %>
       </div>

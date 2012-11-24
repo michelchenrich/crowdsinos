@@ -40,4 +40,13 @@ class Contest < ActiveRecord::Base
     # there is no winner
     Date.current >= self.start and Date.current <= self.end and self.winner.nil?
   end
+  
+  def has_winner?
+    !self.winning_proposal.nil?
+  end
+  
+  def other_proposals
+    other_proposals = self.proposals.dup
+    other_proposals.reject{ |proposal| proposal == self.winning_proposal }
+  end
 end
