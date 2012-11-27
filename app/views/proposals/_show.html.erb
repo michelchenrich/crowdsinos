@@ -2,7 +2,7 @@
   <dt><%= Proposal.human_attribute_name :description %></dt>
   <dd><%= proposal.description %></dd>
 
-  <dd><%= link_to image_tag(proposal.image.url, :class => "img-polaroid", :size => "400x300"), proposal.image.url(:original), :popup => ['original_image', 'height=700,width=900'] %></dd>
+  <dd><%= link_to image_tag(proposal.image.url, :class => "img-polaroid", :size => "400x300"), proposal.image.url(:original), :target => "_blank" %></dd>
 
   <dt><%= Proposal.human_attribute_name :designer %></dt>
   <dd><%= proposal.designer.username unless proposal.designer.nil? %></dd>
@@ -11,9 +11,7 @@
   <dd><%= time_ago_in_words proposal.created_at %> ago</dd>
 </d1>
 
-<% if proposal.contest.is_open? and 
-    proposal.designer == current_user or
-    proposal.contest.contractor == current_user %>
+<% if proposal.contest.is_open? and ( proposal.designer == current_user or proposal.contest.contractor == current_user ) %>
   <div class='btn-toolbar'>
     <% if proposal.designer == current_user %>
       <%= link_to contest_proposal_path(proposal.contest, proposal), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger", :title => "Delete Proposal" do %>
