@@ -10,7 +10,7 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="/"><%= current_user.nil? ? "CrowdSINOS" : current_user.username %></a>
+          <a class="brand"><%= current_user.nil? ? "CrowdSINOS" : current_user.username %></a>
           <ul class="nav">
             <% unless current_user.nil? %>
               <li>
